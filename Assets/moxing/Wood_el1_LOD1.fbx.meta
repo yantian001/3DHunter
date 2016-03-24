@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b27501b7521e72a4bb1e72efd8764f5a
-timeCreated: 1458698939
+guid: d66aa83a785d10e41a59a42439b42e04
+timeCreated: 1458812041
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: grgr2
+    4300000: polySurface134
     9500000: //RootNode
   materials:
     importMaterials: 1
