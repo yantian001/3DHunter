@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d66aa83a785d10e41a59a42439b42e04
-timeCreated: 1458812041
+guid: 1f1dff5d2c1f473499dcf5e9d893350a
+timeCreated: 1458869549
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface134
+    4300000: Rocks3_LP_Group64140
     6400000: //RootNode
     9500000: //RootNode
   materials:
