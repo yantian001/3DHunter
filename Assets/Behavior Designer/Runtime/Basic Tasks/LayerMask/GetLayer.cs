@@ -15,7 +15,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityLayerMask
         public override TaskStatus OnUpdate()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
-            storeResult.Value = LayerMask.LayerToName(currentGameObject.layer);
+            storeResult = LayerMask.LayerToName(currentGameObject.layer);
             return TaskStatus.Success;
         }
 
