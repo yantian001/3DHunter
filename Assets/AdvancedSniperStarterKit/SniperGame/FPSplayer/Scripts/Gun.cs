@@ -29,6 +29,7 @@ public class Gun : MonoBehaviour
     public AudioClip SoundReloadEnd;
     public AudioClip SoundEmpty;
     public float MouseSensitive = 1;
+    public float MouseStability = 20.5f;
     public bool Zooming;
     public bool SemiAuto;
     public bool InfinityAmmo = true;
@@ -221,9 +222,9 @@ public class Gun : MonoBehaviour
                 break;
             case 3:
                 // Start Reloading
-                if (GetComponent<Animation>()[ReloadPose] )
+                if (GetComponent<Animation>()[ReloadPose])
                 {
-                    if ( AmmoPack > 0 || InfinityAmmo)
+                    if (AmmoPack > 0 || InfinityAmmo)
                     {
                         GetComponent<Animation>().clip = GetComponent<Animation>()[ReloadPose].clip;
                         GetComponent<Animation>().CrossFade(ReloadPose, 0.5f, PlayMode.StopAll);
@@ -301,12 +302,14 @@ public class Gun : MonoBehaviour
             {
                 FPSmotor.sensitivityXMult = MouseSensitiveZoom;
                 FPSmotor.sensitivityYMult = MouseSensitiveZoom;
+                FPSmotor.stability = MouseStability / 100;
                 FPSmotor.Noise = true;
             }
             else
             {
                 FPSmotor.sensitivityXMult = MouseSensitive;
                 FPSmotor.sensitivityYMult = MouseSensitive;
+                FPSmotor.stability = MouseStability / 100;
                 FPSmotor.Noise = false;
             }
         }
@@ -315,7 +318,7 @@ public class Gun : MonoBehaviour
         {
             if (ZoomFOVLists.Length > 0)
             {
-                MouseSensitiveZoom = ((MouseSensitive * 0.16f) / 10) * ZoomFOVLists[IndexZoom];
+                MouseSensitiveZoom = ((MouseSensitive *0.16f) / 10) * ZoomFOVLists[IndexZoom];
                 NormalCamera.GetComponent<Camera>().fieldOfView += (ZoomFOVLists[IndexZoom] - NormalCamera.GetComponent<Camera>().fieldOfView) / 10;
             }
         }
@@ -431,7 +434,7 @@ public class Gun : MonoBehaviour
                     if (!SemiAuto)
                     {
                         gunState = 1;
-                       
+
                     }
                     else
                     {
@@ -462,39 +465,46 @@ public class Gun : MonoBehaviour
                 }
 
             }
-            else if(gunState == 5)
+            else if (gunState == 5)
             {
                 audiosource.PlayOneShot(SoundEmpty);
             }
         }
     }
 
-    //void OnGUI ()
-    //{
-    //	if (!Active)
-    //		return;
-    //       GUI.depth = 1;
-    //       if (NormalCamera) {
-    //		if (NormalCamera.GetComponent<Camera>().enabled) {
-    //			if (!Zooming) {
-    //				if (CrosshairImg) {
-    //					GUI.color = new Color (1, 1, 1, 0.8f);
-    //					GUI.DrawTexture (new Rect ((Screen.width * 0.5f) - (CrosshairImg.width * 0.5f), (Screen.height * 0.5f) - (CrosshairImg.height * 0.5f), CrosshairImg.width, CrosshairImg.height), CrosshairImg);
-    //					GUI.color = Color.white;
-    //				}
-    //			} else {
-    //				if (CrosshairZoom) {
-    //					float scopeSize = (Screen.height * 1.8f);
-    //					GUI.DrawTexture (new Rect ((Screen.width * 0.5f) - (scopeSize * 0.5f), (Screen.height * 0.5f) - (scopeSize * 0.5f), scopeSize, scopeSize), CrosshairZoom);
-    //					GUI.skin.label.fontSize = 24;
-    //					GUI.skin.label.normal.textColor = new Color (0, 0, 0, 1);
-    //					GUI.Label (new Rect ((Screen.width * 0.5f) - (CrosshairImg.width * 0.2f) + 30, (Screen.height * 0.5f) - (CrosshairImg.height * 0.2f), 200, 30), "H "+Offset.x+" : V "+Offset.y);
+    void OnGUI()
+    {
+        if (!Active)
+            return;
+        GUI.depth = 1;
+        if (NormalCamera)
+        {
+            if (NormalCamera.GetComponent<Camera>().enabled)
+            {
+                if (!Zooming)
+                {
+                    if (CrosshairImg)
+                    {
+                        GUI.color = new Color(1, 1, 1, 0.8f);
+                        GUI.DrawTexture(new Rect((Screen.width * 0.5f) - (CrosshairImg.width * 0.5f), (Screen.height * 0.5f) - (CrosshairImg.height * 0.5f), CrosshairImg.width, CrosshairImg.height), CrosshairImg);
+                        GUI.color = Color.white;
+                    }
+                }
+                else
+                {
+                    if (CrosshairZoom)
+                    {
+                        float scopeSize = (Screen.height * 1.8f);
+                        GUI.DrawTexture(new Rect((Screen.width * 0.5f) - (scopeSize * 0.5f), (Screen.height * 0.5f) - (scopeSize * 0.5f), scopeSize, scopeSize), CrosshairZoom);
+                        GUI.skin.label.fontSize = 24;
+                        GUI.skin.label.normal.textColor = new Color(0, 0, 0, 1);
+                        GUI.Label(new Rect((Screen.width * 0.5f) - (CrosshairImg.width * 0.2f) + 30, (Screen.height * 0.5f) - (CrosshairImg.height * 0.2f), 200, 30), "H " + Offset.x + " : V " + Offset.y);
 
-    //				}
-    //			}
-    //		}
-    //	}
-    //}
+                    }
+                }
+            }
+        }
+    }
 
 
 }

@@ -4,7 +4,9 @@ using System.Collections;
 
 public class AS_BulletHiter : MonoBehaviour {
 
+    public HitPosition HitPos = HitPosition.NORMAL;
 	public GameObject ParticleHit;
+    public int Sort = 0;
 	public GameObject RootObject;
 	public GameObject DecayFX;
 	public float DecayDuration = 10;

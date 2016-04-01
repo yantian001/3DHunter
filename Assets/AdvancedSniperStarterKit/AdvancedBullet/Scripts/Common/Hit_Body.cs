@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CapsuleCollider))]
-
+[RequireComponent(typeof(Collider))]
 public class Hit_Body : AS_BulletHiter
 {
 	public int Suffix = 0;

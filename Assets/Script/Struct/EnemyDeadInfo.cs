@@ -9,4 +9,6 @@ public class EnemyDeadInfo  {
 
     public bool headShot = false;
 
+    public HitPosition hitPos;
+
 }

@@ -7,6 +7,7 @@ struct casthit
     public int index;
     public float distance;
     public string name;
+    public int sort;
 }
 
 [RequireComponent(typeof(Rigidbody))]
@@ -135,6 +136,7 @@ public class AS_Bullet : MonoBehaviour
                 return false;
             }
         }
+
         hittedList.Add(ob);
         return true;
     }
@@ -225,8 +227,16 @@ public class AS_Bullet : MonoBehaviour
                         casted.distance = Vector3.Distance(initialPosition, casterhits[i].point);
                         casted.index = i;
                         casted.name = casterhits[i].collider.name;
+                        //Debug.Log(casterhits[i].collider.transform.root.gameObject.name);
+                        var bh = casterhits[i].collider.GetComponent<AS_BulletHiter>();
+                        if (bh)
+                        {
+                            casted.sort = bh.Sort;
+                        }
+                        else
+                            casted.sort = -1;
                         castHits.Add(casted);
-                        //Debug.Log("cast "+casterhits[i].collider.name +"  ("+Vector3.Distance(initialPosition,casterhits[i].point)+")");
+                        //Debug.Log("cast " + casterhits[i].collider.name + "  (" + Vector3.Distance(initialPosition, casterhits[i].point) + ")");
                     }
                 }
             }
@@ -235,12 +245,18 @@ public class AS_Bullet : MonoBehaviour
 
         // sorted first to the last
         hits = new RaycastHit[castcount];
-        castHits.Sort((x, y) => x.distance.CompareTo(y.distance));
+        //ÐÞ¸ÄÅÅÐò·½Ê½
+        // castHits.Sort((x, y) => x.distance.CompareTo(y.distance));
+        castHits.Sort((x, y) =>
+        {
+            return y.sort.CompareTo(x.sort);
+        });
+
 
         for (int i = 0; i < castHits.Count; i++)
         {
             hits[i] = casterhits[castHits[i].index];
-            //Debug.Log("soted cast "+castHits[i].index+" to "+i+" "+castHits[i].name+"  ("+castHits[i].distance+")");
+            Debug.Log("soted cast "+castHits[i].index+" to "+i+" "+castHits[i].name+"  ("+castHits[i].distance+")");
         }
 
         for (var i = 0; i < hits.Length && hitcount < HitCountMax; i++)
@@ -276,7 +292,8 @@ public class AS_Bullet : MonoBehaviour
                     {
                         hitparticle = (GameObject)Instantiate(bulletHit.ParticleHit, hit.point, hit.transform.rotation);
                     }
-                    if (actionPreset && !firsthited)
+                    if (actionPreset )
+                    // if (actionPreset && !firsthited)
                     {
                         actionPreset.TargetHited(this, bulletHit, hit.point);
                     }

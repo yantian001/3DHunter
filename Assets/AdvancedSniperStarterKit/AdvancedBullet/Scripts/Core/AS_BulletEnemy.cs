@@ -192,6 +192,7 @@ public class AS_BulletEnemy : MonoBehaviour
 						casted.distance = Vector3.Distance (initialPosition, casterhits [i].point);
 						casted.index = i;
 						casted.name = casterhits [i].collider.name;
+                       
 						castHits.Add (casted);
 						//Debug.Log("cast "+casterhits[i].collider.name +"  ("+Vector3.Distance(initialPosition,casterhits[i].point)+")");
 					}

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2ed45effbe3cf574caf2367561fa1e32
+timeCreated: 1458009684
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - clickClip: {fileID: 8300000, guid: 5a2195e3aab4c274eae392882d8803e9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
