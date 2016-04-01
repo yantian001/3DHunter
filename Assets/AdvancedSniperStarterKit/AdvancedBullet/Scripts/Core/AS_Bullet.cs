@@ -256,7 +256,7 @@ public class AS_Bullet : MonoBehaviour
         for (int i = 0; i < castHits.Count; i++)
         {
             hits[i] = casterhits[castHits[i].index];
-            Debug.Log("soted cast "+castHits[i].index+" to "+i+" "+castHits[i].name+"  ("+castHits[i].distance+")");
+           // Debug.Log("soted cast "+castHits[i].index+" to "+i+" "+castHits[i].name+"  ("+castHits[i].distance+")");
         }
 
         for (var i = 0; i < hits.Length && hitcount < HitCountMax; i++)

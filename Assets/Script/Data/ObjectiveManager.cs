@@ -32,6 +32,7 @@ public class ObjectiveManager : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+            GameValue.s_currentObjective = levels[0].objectives[0];
         }
         else
         {

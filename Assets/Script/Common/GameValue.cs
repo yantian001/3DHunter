@@ -12,6 +12,8 @@ public class GameValue
     /// </summary>
     public static int level = -1;
 
+    public static Objective s_currentObjective = null;
+
     public static string GetMapSceneName()
     {
         if(mapId == 1)

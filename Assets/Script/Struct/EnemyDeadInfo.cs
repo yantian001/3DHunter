@@ -11,4 +11,6 @@ public class EnemyDeadInfo  {
 
     public HitPosition hitPos;
 
+    public Animal animal;
+
 }

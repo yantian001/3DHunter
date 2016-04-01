@@ -31,4 +31,9 @@
     GAMEQUIT,
     GAMEMORE,
     GAMERATE,
+    /// <summary>
+    /// 敌人走光了
+    /// </summary>
+    ENEMYCLEARED,
+    ENEMYAWAY,
 }

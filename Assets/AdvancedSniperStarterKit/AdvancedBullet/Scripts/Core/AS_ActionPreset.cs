@@ -29,7 +29,7 @@ public class AS_ActionPreset : MonoBehaviour
 		}
 		ActionCam.Detected = true;
 		ActionCam.ObjectLookAtRoot = target.RootObject;
-		//Debug.Log("State : FirstDetected");
+		Debug.Log("State : FirstDetected");
 	}
 	// When bullet flying and detected a target on the way.
 	public virtual void TargetDetected (AS_Bullet bullet, AS_BulletHiter target, Vector3 point)
@@ -40,7 +40,7 @@ public class AS_ActionPreset : MonoBehaviour
 		//Debug.Log ("Running Detect target : " + target.name + " > "+ActionCam.Detected + " time "+Time.time);
 		ActionCam.Detected = true;
 		ActionCam.ObjectLookAtRoot = target.RootObject;
-		//Debug.Log("State : TargetDetected");
+		Debug.Log("State : TargetDetected");
 	}
 	// When bullet hit target
 	public virtual void TargetHited (AS_Bullet bullet, AS_BulletHiter target, Vector3 point)

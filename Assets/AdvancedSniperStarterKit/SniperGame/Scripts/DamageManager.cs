@@ -8,7 +8,7 @@ public class DamageManager : MonoBehaviour
     public int hp = 100;
     public int Score = 10;
     private float distancedamage;
-
+    private bool isDied = false;
     public bool isEnemy = true;
 
     void Start()
@@ -18,9 +18,10 @@ public class DamageManager : MonoBehaviour
 
     void Update()
     {
-        if (hp <= 0)
+        if (hp <= 0 && !isDied)
         {
             Dead(Random.Range(0, deadbody.Length));
+            isDied = true;
         }
     }
 
@@ -99,6 +100,7 @@ public class DamageManager : MonoBehaviour
         edi.transform = this.transform;
         edi.headShot = suffix == 2;
         edi.hitPos = pos;
+        edi.animal = this.GetComponent<Animal>();
         LeanTween.dispatchEvent((int)Events.ENEMYDIE, edi);
     }
 

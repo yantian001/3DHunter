@@ -1,238 +1,109 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class GameManager : MonoBehaviour
 {
 
+    private int targetKilled = 0;
 
-    public AS_ActionCamera ActionCamera;
-    /// <summary>
-    /// 
-    /// </summary>
-    public Spwaner spwaner = null;
-
-    public TimeController timer;
-
-    public HPSlider hp;
-
-    public GameStatu statu { get; private set; }
-
-    public AudioClip successAudio;
-
-    public AudioClip failAudio;
-
-    GameRecords record = null;
+    bool enemyCleared = false;
+    public GameStatu gameStatu = GameStatu.Init;
     // Use this for initialization
     void Start()
     {
-        record = new GameRecords();
-        record.Level = GameValue.level;
-        record.MapId = GameValue.mapId;
-        if (ActionCamera == null)
-        {
-            ActionCamera = FindObjectOfType(typeof(AS_ActionCamera)) as AS_ActionCamera;
-        }
-        if (hp == null)
-        {
-            hp = FindObjectOfType(typeof(HPSlider)) as HPSlider;
-        }
 
-        if (spwaner == null)
-        {
-            var sp = GameObject.FindGameObjectWithTag("Spawner");
-            if (sp)
-            {
-                spwaner = sp.GetComponent<Spwaner>();
-                if (spwaner == null)
-                { Debug.LogError("dont found spawner "); }
-            }
-        }
-
-        if (timer == null)
-        {
-            timer = FindObjectOfType(typeof(TimeController)) as TimeController;
-        }
-
-        ChangeGameStatu(GameStatu.InGame);
     }
 
-    public void OnEnable()
+    public void Awake()
     {
-        LeanTween.addListener((int)Events.TIMEUP, OnTimeUp);
+        //监听死亡
         LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
-        LeanTween.addListener((int)Events.GAMEPAUSE, OnPause);
+        LeanTween.addListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
+
     }
 
-    public void OnDisable()
+  
+
+    public void OnDestroy()
     {
-        LeanTween.removeListener((int)Events.TIMEUP, OnTimeUp);
         LeanTween.removeListener((int)Events.ENEMYDIE, OnEnemyDie);
-        LeanTween.removeListener((int)Events.GAMEPAUSE, OnPause);
-
+        LeanTween.removeListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
     }
 
+    private void OnEnemyCleared(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        enemyCleared = true;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        //GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        ////启用特效镜头
-        //if (ActionCamera != null)
-        //{
-        //    if (enemys.Length <= 1)
-        //    {
-        //        ActionCamera.gameObject.SetActive(true);
-        //    }
-        //    else
-        //    {
-        //        ActionCamera.gameObject.SetActive(false);
-        //    }
-        //}
-
-        //if (enemys == null || enemys.Length <= 0)
-        //{
-        //    if (!ActionCamera.InAction)
-        //        Debug.Log("Success");
-        //}
-        if (statu == GameStatu.InGame)
-        {
-            CheckGameStatus();
-            CheckActionCamera();
-        }
-    }
-    /// <summary>
-    /// 检查游戏状态
-    /// </summary>
-    void CheckGameStatus()
-    {
-        //检查敌人是否杀完
-        if (spwaner.GetEnemyCount() <= 0)
+        if (targetKilled >= GameValue.s_currentObjective.objectiveCount)
         {
             ChangeGameStatu(GameStatu.Completed);
-            OnGameCompleted();
         }
-        else if (hp.IsDead)
+        else if(enemyCleared && targetKilled <= GameValue.s_currentObjective.objectiveCount)
         {
-            OnPlayerDie();
+            ChangeGameStatu(GameStatu.Failed);
         }
     }
 
-    void CheckActionCamera()
-    {
-        //启用特效镜头
-        if (ActionCamera != null)
-        {
-            if (spwaner.GetEnemyCount() <= 1)
-            {
-                ActionCamera.gameObject.SetActive(true);
-            }
-            else
-            {
-                ActionCamera.gameObject.SetActive(false);
-            }
-        }
+    
 
-    }
-
-    /// <summary>
-    /// 更改游戏状态
-    /// </summary>
-    /// <param name="s"></param>
-    void ChangeGameStatu(GameStatu s)
+    void ChangeGameStatu(GameStatu statu)
     {
-        statu = s;
+        gameStatu = statu;
         GameValue.staus = statu;
-        if (statu == GameStatu.Paused || statu == GameStatu.Failed || statu == GameStatu.Completed)
-        {
-            BahaviorGlobalVariables.SetVariableValue("InGame", false);
-        }
-        else
-        {
-            BahaviorGlobalVariables.SetVariableValue("InGame", true);
-        }
+        //if (statu == GameStatu.Paused || statu == GameStatu.Failed || statu == GameStatu.Completed)
+        //{
+        //    BahaviorGlobalVariables.SetVariableValue("InGame", false);
+        //}
+        //else
+        //{
+        //    BahaviorGlobalVariables.SetVariableValue("InGame", true);
+        //}
     }
 
-    void OnEnemyDie(LTEvent evt)
+    public void OnEnemyDie(LTEvent evt)
     {
         if (evt.data != null)
         {
-            var edi = evt.data as EnemyDeadInfo;
-            if (edi.headShot)
-                record.HeadShotCount += 1;
-            else
-                record.EnemyKills += 1;
+            EnemyDeadInfo edi = evt.data as EnemyDeadInfo;
+            if (edi != null && edi.animal != null)
+            {
+                Animal target = GameValue.s_currentObjective.targetObjects.GetComponent<Animal>();
+                if (target)
+                {
+                    if (target.Id == edi.animal.Id)
+                    {
+                        if (GameValue.s_currentObjective.objectiveType == ObjectiveType.COUNT)
+                        {
+                            targetKilled += 1;
+                        }
+                        else if (GameValue.s_currentObjective.objectiveType == ObjectiveType.HEADKILL)
+                        {
+                            if (edi.hitPos == HitPosition.HEAD)
+                                targetKilled += 1;
+                        }
+                        else if (GameValue.s_currentObjective.objectiveType == ObjectiveType.HEARTKILL)
+                        {
+                            if (edi.hitPos == HitPosition.HEART)
+                                targetKilled += 1;
+                        }
+                        else if (GameValue.s_currentObjective.objectiveType == ObjectiveType.LUNGKILL)
+                        {
+                            if (edi.hitPos == HitPosition.LUNG)
+                                targetKilled += 1;
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Dont find type Animal at targetobjects!");
+                }
+            }
         }
-    }
-
-    void OnTimeUp(LTEvent evt)
-    {
-        Debug.Log("Time Up!");
-        ChangeGameStatu(GameStatu.Failed);
-        record.FinishType = GameFinishType.TimeUp;
-        if (failAudio != null)
-            LeanAudio.play(failAudio);
-        GameFinish();
-    }
-
-    /// <summary>
-    /// 游戏完成
-    /// </summary>
-    void OnGameCompleted()
-    {
-        Debug.Log("Level Completed!");
-        ChangeGameStatu(GameStatu.Completed);
-        record.FinishType = GameFinishType.Completed;
-        if (successAudio != null)
-            LeanAudio.play(successAudio);
-        GameFinish();
-
-    }
-
-    void OnPlayerDie()
-    {
-        // Debug.Log("Player Die!");
-        ChangeGameStatu(GameStatu.Failed);
-        record.FinishType = GameFinishType.Failed;
-        // timer.SetTimeLeft(0);
-        if (failAudio != null)
-            LeanAudio.play(failAudio);
-        GameFinish();
-    }
-
-    void GameFinish()
-    {
-        if (timer != null)
-        {
-            if (record.FinishType != GameFinishType.Failed)
-                record.TimeLeft = timer.GetTimeLeft();
-            else
-                record.TimeLeft = 0;
-        }
-        LeanTween.dispatchEvent((int)Events.GAMEFINISH, record);
-        Invoke("DisplayAds", 0.5f);
-    }
-
-    void DisplayAds()
-    {
-        ChartboostUtil.Instance.ShowInterstitialOnDefault();
-    }
-
-    void OnPause(LTEvent evt)
-    {
-        if (statu == GameStatu.InGame)
-        {
-            ChangeGameStatu(GameStatu.Paused);
-        }
-
-        LeanTween.addListener((int)Events.GAMECONTINUE, OnContinue);
-        Invoke("DisplayAds", 0.5f);
-        // Time.timeScale = 0;
-    }
-
-    void OnContinue(LTEvent evt)
-    {
-        LeanTween.removeListener((int)Events.GAMECONTINUE, OnContinue);
-        ChangeGameStatu(GameStatu.InGame);
-        //  Time.timeScale = 1;
     }
 }

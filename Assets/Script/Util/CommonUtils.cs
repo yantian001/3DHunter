@@ -138,7 +138,7 @@ public class CommonUtils
     /// <param name="parent"></param>
     /// <param name="child"></param>
     /// <param name="action"></param>
-    public static void SetChildButtonCallBack(RectTransform parent ,string child ,UnityEngine.Events.UnityAction action)
+    public static void SetChildButtonCallBack(RectTransform parent, string child, UnityEngine.Events.UnityAction action)
     {
         if (parent == null || string.IsNullOrEmpty(child) || action == null)
             return;
@@ -147,11 +147,26 @@ public class CommonUtils
         if (childNode)
         {
             var button = childNode.GetComponent<Button>();
-            if(button)
+            if (button)
             {
                 button.onClick.RemoveListener(action);
                 button.onClick.AddListener(action);
             }
         }
+    }
+
+    /// <summary>
+    /// 检测地面
+    /// </summary>
+    /// <param name="position"></param>
+    /// <returns></returns>
+    public static Vector3 DetectGround(Vector3 position)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(position, -Vector3.up, out hit, 1000.0f))
+        {
+            return hit.point;
+        }
+        return position;
     }
 }

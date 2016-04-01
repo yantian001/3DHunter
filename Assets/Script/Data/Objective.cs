@@ -8,11 +8,11 @@ public class Objective : ScriptableObject
     /// </summary>
     [Tooltip("任务类型")]
     public ObjectiveType objectiveType;
-    /// <summary>
-    /// 动物类型
-    /// </summary>
-    [Tooltip("动物类型")]
-    public AnimalType animalType;
+    ///// <summary>
+    ///// 动物类型
+    ///// </summary>
+    //[Tooltip("动物类型")]
+    //public AnimalType animalType;
     /// <summary>
     /// 任务数量
     /// </summary>
@@ -26,12 +26,12 @@ public class Objective : ScriptableObject
     /// <summary>
     /// 目标产生的地点ID
     /// </summary>
-    public int targetPositionId;
+    public int[] targetPositionId;
     /// <summary>
     /// 任务目标对象
     /// </summary>
     [Tooltip("任务目标对象")]
-    public GameObject[] targetObjects;
+    public GameObject targetObjects;
     /// <summary>
     /// 任务目标产生数量
     /// </summary>
@@ -78,5 +78,5 @@ public class Objective : ScriptableObject
     /// </summary>
     [Tooltip("武器弹夹数量要求")]
     public float capacityRequired = -1f;
-    
+
 }
