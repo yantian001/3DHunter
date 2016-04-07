@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: ddcdc471ab0f1ff459b3aa9157c5a549
+timeCreated: 1460021694
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: wolfdraenor_fire
+    100004: wolfdraenor_fire 1
+    100006: wolfdraenor_fire_bone_0
+    100008: wolfdraenor_fire_bone_1
+    100010: wolfdraenor_fire_bone_10
+    100012: wolfdraenor_fire_bone_11
+    100014: wolfdraenor_fire_bone_12
+    100016: wolfdraenor_fire_bone_13
+    100018: wolfdraenor_fire_bone_14
+    100020: wolfdraenor_fire_bone_15
+    100022: wolfdraenor_fire_bone_16
+    100024: wolfdraenor_fire_bone_17
+    100026: wolfdraenor_fire_bone_18
+    100028: wolfdraenor_fire_bone_19
+    100030: wolfdraenor_fire_bone_2
+    100032: wolfdraenor_fire_bone_20
+    100034: wolfdraenor_fire_bone_21
+    100036: wolfdraenor_fire_bone_22
+    100038: wolfdraenor_fire_bone_23
+    100040: wolfdraenor_fire_bone_24
+    100042: wolfdraenor_fire_bone_25
+    100044: wolfdraenor_fire_bone_26
+    100046: wolfdraenor_fire_bone_27
+    100048: wolfdraenor_fire_bone_28
+    100050: wolfdraenor_fire_bone_29
+    100052: wolfdraenor_fire_bone_3
+    100054: wolfdraenor_fire_bone_4
+    100056: wolfdraenor_fire_bone_5
+    100058: wolfdraenor_fire_bone_6
+    100060: wolfdraenor_fire_bone_7
+    100062: wolfdraenor_fire_bone_8
+    100064: wolfdraenor_fire_bone_9
+    400000: //RootNode
+    400002: wolfdraenor_fire
+    400004: wolfdraenor_fire 1
+    400006: wolfdraenor_fire_bone_0
+    400008: wolfdraenor_fire_bone_1
+    400010: wolfdraenor_fire_bone_10
+    400012: wolfdraenor_fire_bone_11
+    400014: wolfdraenor_fire_bone_12
+    400016: wolfdraenor_fire_bone_13
+    400018: wolfdraenor_fire_bone_14
+    400020: wolfdraenor_fire_bone_15
+    400022: wolfdraenor_fire_bone_16
+    400024: wolfdraenor_fire_bone_17
+    400026: wolfdraenor_fire_bone_18
+    400028: wolfdraenor_fire_bone_19
+    400030: wolfdraenor_fire_bone_2
+    400032: wolfdraenor_fire_bone_20
+    400034: wolfdraenor_fire_bone_21
+    400036: wolfdraenor_fire_bone_22
+    400038: wolfdraenor_fire_bone_23
+    400040: wolfdraenor_fire_bone_24
+    400042: wolfdraenor_fire_bone_25
+    400044: wolfdraenor_fire_bone_26
+    400046: wolfdraenor_fire_bone_27
+    400048: wolfdraenor_fire_bone_28
+    400050: wolfdraenor_fire_bone_29
+    400052: wolfdraenor_fire_bone_3
+    400054: wolfdraenor_fire_bone_4
+    400056: wolfdraenor_fire_bone_5
+    400058: wolfdraenor_fire_bone_6
+    400060: wolfdraenor_fire_bone_7
+    400062: wolfdraenor_fire_bone_8
+    400064: wolfdraenor_fire_bone_9
+    4300000: wolfdraenor_fire
+    7400000: Walk [0]
+    7400002: Run [1]
+    7400004: AttackUnarmed [4]
+    7400006: CombatCritical [5]
+    7400008: Death [7]
+    7400010: CreatureSpecial [10]
+    7400012: UseStandingStart [37]
+    9500000: //RootNode
+    13700000: wolfdraenor_fire
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
