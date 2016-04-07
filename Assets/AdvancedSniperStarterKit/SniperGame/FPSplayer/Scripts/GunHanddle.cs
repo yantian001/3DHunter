@@ -135,7 +135,7 @@ public class GunHanddle : MonoBehaviour
             isFirstFire = true;
             if (isFirstFire)
             {
-                BehaviorDesigner.Runtime.GlobalVariables.Instance.SetVariableValue("PlayerFired", true);
+                BehaviorDesigner.Runtime.GlobalVariables.Instance.SetVariableValue("Fired", true);
             }
         }
     }

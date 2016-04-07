@@ -19,7 +19,7 @@ public class Hit_Body : AS_BulletHiter
 		float distance = Vector3.Distance (bullet.pointShoot, hit.point);
 		if (damageManage) {
 			int damage = (int)((float)bullet.Damage * DamageMult);
-			damageManage.ApplyDamage (damage, bullet.transform.forward * bullet.HitForce, distance, Suffix);
+			damageManage.ApplyDamage (damage, bullet.transform.forward * bullet.HitForce, distance, Suffix,HitPos);
 		}
 		AddAudio (hit.point);
 		base.OnHit (hit, bullet);

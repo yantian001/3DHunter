@@ -36,4 +36,5 @@
     /// </summary>
     ENEMYCLEARED,
     ENEMYAWAY,
+    PROJECTION,
 }

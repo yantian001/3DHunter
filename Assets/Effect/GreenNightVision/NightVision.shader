@@ -47,12 +47,12 @@ Shader "Image Effects/Night Vision" {
 
 		//add lens circle effect
 		//(could be optimised by using texture)
-		float dist = distance(i.uv, float2(0.5,0.5));
-		pix *= smoothstep(0.5,0.45,dist);
+		//float dist = distance(i.uv, float2(0.5,0.5));
+		//pix *= smoothstep(0.5,0.45,dist);
 
 		//add rb to the brightest pixels
 		pix.rb = max(pix.r - 0.75, 0) * 4;
-
+		//pix.a = 0.5;
 		// return pix pixel ;)	
 		return pix;
 	}

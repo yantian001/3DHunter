@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using BehaviorDesigner.Runtime;
 public class DamageManager : MonoBehaviour
 {
 
@@ -11,9 +11,14 @@ public class DamageManager : MonoBehaviour
     private bool isDied = false;
     public bool isEnemy = true;
 
+    public BehaviorTree behavior;
+
     void Start()
     {
-
+        if(behavior == null)
+        {
+            behavior = GetComponent<BehaviorTree>();
+        }
     }
 
     void Update()
@@ -53,6 +58,9 @@ public class DamageManager : MonoBehaviour
 
     public void ApplyDamage(int damage, Vector3 velosity, float distance, int suffix, HitPosition hitPos)
     {
+     //   Debug.Log(Vector3.Dot(velosity.normalized, transform.forward));
+       // Debug.Log(Vector3.Cross(transform.forward, velosity.normalized).magnitude);
+
         if (hp <= 0)
         {
             return;
@@ -61,8 +69,22 @@ public class DamageManager : MonoBehaviour
         hp -= damage;
         if (hp <= 0)
         {
-            Dead(suffix, hitPos);
+            behavior.SetVariableValue("IsDead", true);
+            // Vector3.Cross(transform.forward,velosity.normalized)
+           //if(Vector3.Dot(velosity.normalized,transform.forward) > 0)
+           if(Vector3.Cross(transform.forward, velosity.normalized).y > 0)
+            {
+                //animation.CrossFade("Death-Right", 0.1f, PlayMode.StopAll);
+                behavior.SetVariableValue("deathAnimation", "Death-Right");
+            }
+           else
+            {
+                //animation.CrossFade("Death-Left", 0.1f, PlayMode.StopAll);
+                // behavior.SendEvent<object>("Dead", 2);
+                behavior.SetVariableValue("deathAnimation", "Death-Left");
+            }
         }
+        
     }
 
     public void Dead(int suffix, HitPosition hitPos)
