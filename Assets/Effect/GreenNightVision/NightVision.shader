@@ -51,8 +51,12 @@ Shader "Image Effects/Night Vision" {
 		//pix *= smoothstep(0.5,0.45,dist);
 
 		//add rb to the brightest pixels
-		pix.rb = max(pix.r - 0.75, 0) * 4;
-		//pix.a = 0.5;
+		pix.rgb = max(pix.rgb + 0.25, 0) * 0.1;
+		/*pix.r = 1;
+		pix.g = 0;
+		pix.b = 0;
+		pix.a = 0.5;*/
+		//pix = float4(0.8, 0.8, 0.8, 0.5);
 		// return pix pixel ;)	
 		return pix;
 	}
