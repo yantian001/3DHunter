@@ -21,11 +21,12 @@ public class FPSInputMobileController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Application.targetFrameRate = 60;
+        
     }
 
     public void Awake()
     {
+        Application.targetFrameRate = 60;
         FPSmotor = GetComponent<FPSController>();
         gunHanddle = GetComponent<GunHanddle>();
     }
@@ -36,6 +37,7 @@ public class FPSInputMobileController : MonoBehaviour
     {
 
         Vector2 aimDir = new Vector2(CnInputManager.GetAxis(aimHorizontal), CnInputManager.GetAxis(aimVertical)) * touchSensMult;
+       // Debug.Log(aimDir);
         FPSmotor.Aim(aimDir);
         ////MouseLock.MouseLocked = false;
 

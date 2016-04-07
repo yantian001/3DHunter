@@ -9,6 +9,8 @@ namespace CnControls
     /// </summary>
     public class CnInputManager
     {
+        private const float AlmostZero = 0.00000001f;
+
         private static CnInputManager _instance;
 
         private static CnInputManager Instance
@@ -151,7 +153,7 @@ namespace CnControls
         public static bool GetButtonUp(string buttonName)
         {
             // We first check the stadard Button behaviour
-            var standardInputButtonState = Input.GetButtonUp(buttonName);
+            var standardInputButtonState = Input.GetButtonDown(buttonName);
             // If the stadard Unity Input button is being pressed, we just retur true
             if (standardInputButtonState == true) return true;
 
@@ -269,7 +271,7 @@ namespace CnControls
             // Or zero if all of them are zero
 
             float axisValue = isRaw ? Input.GetAxisRaw(axisName) : Input.GetAxis(axisName);
-            if (Mathf.Approximately(axisValue, 0f))
+            if (Mathf.Abs(axisValue) > AlmostZero)
             {
                 return axisValue;
             }
@@ -277,7 +279,7 @@ namespace CnControls
             for (int i = 0; i < virtualAxisList.Count; i++)
             {
                 var currentAxisValue = virtualAxisList[i].Value;
-                if (Mathf.Approximately(currentAxisValue, 0f))
+                if (Mathf.Abs(currentAxisValue) > AlmostZero)
                 {
                     return currentAxisValue;
                 }
