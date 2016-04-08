@@ -80,6 +80,7 @@ ModelImporter:
     7400010: CreatureSpecial [10]
     7400012: UseStandingStart [37]
     9500000: //RootNode
+    11100000: //RootNode
     13700000: wolfdraenor_fire
   materials:
     importMaterials: 1
@@ -100,7 +101,651 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk [0]
+      takeName: Walk [0]
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run [1]
+      takeName: Run [1]
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: AttackUnarmed [4]
+      takeName: AttackUnarmed [4]
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: CombatCritical [5]
+      takeName: CombatCritical [5]
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death [7]
+      takeName: Death [7]
+      firstFrame: 0
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: CreatureSpecial [10]
+      takeName: CreatureSpecial [10]
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: UseStandingStart [37]
+      takeName: UseStandingStart [37]
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wolfdraenor_fire
+        weight: 1
+      - path: wolfdraenor_fire 1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_5/wolfdraenor_fire_bone_8/wolfdraenor_fire_bone_19
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_1/wolfdraenor_fire_bone_6/wolfdraenor_fire_bone_9/wolfdraenor_fire_bone_20
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_12/wolfdraenor_fire_bone_24/wolfdraenor_fire_bone_26/wolfdraenor_fire_bone_28
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_13/wolfdraenor_fire_bone_25/wolfdraenor_fire_bone_27/wolfdraenor_fire_bone_29
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_14
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_15
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_16
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_17
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_2/wolfdraenor_fire_bone_4/wolfdraenor_fire_bone_11/wolfdraenor_fire_bone_18
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_21
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_22
+        weight: 1
+      - path: wolfdraenor_fire 1/wolfdraenor_fire_bone_0/wolfdraenor_fire_bone_3/wolfdraenor_fire_bone_7/wolfdraenor_fire_bone_10/wolfdraenor_fire_bone_23
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -139,7 +784,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
-
+using UnityStandardAssets.ImageEffects;
 public class CameraProjection : MonoBehaviour
 {
 
-    public CameraFilterPack_Color_GrayScale cameraGray;
+    public ColorCorrectionRamp cameraGray;
+
+    
 
     // Use this for initialization
     void Start()
     {
         if(cameraGray == null)
         {
-            cameraGray = GetComponent<CameraFilterPack_Color_GrayScale>();
+            cameraGray = GetComponent<ColorCorrectionRamp>();
             if(cameraGray == null)
             {
-                cameraGray = gameObject.AddComponent<CameraFilterPack_Color_GrayScale>();
+                cameraGray = gameObject.AddComponent<ColorCorrectionRamp>();
             }
         }
         cameraGray.enabled = false;

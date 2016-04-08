@@ -52,8 +52,9 @@ Shader "CameraFilterPack/Color_GrayScale" {
 
 float4 frag (v2f i) : COLOR
 {
-	float3 r=dot(tex2D(_MainTex, i.texcoord.xy).rgb, float3(.222, .707, .071));
-    return float4(r, 1);
+	//float3 r = dot(tex2D(_MainTex, i.texcoord.xy).rgb, float3(0.222, .707, .071));
+	float3 r=dot(tex2D(_MainTex, i.texcoord.xy).rgb, float3(0.11, .247, .831));
+    return float4(r, 0.2);
     
 }
 			
