@@ -9,6 +9,7 @@ public class AnimalProjection : MonoBehaviour
     public Material normalMat;
 
     public SkinnedMeshRenderer skinMeshRender;
+
     // Use this for initialization
     void Start()
     {
@@ -46,11 +47,12 @@ public class AnimalProjection : MonoBehaviour
         if (isInProjection && projectionMat)
         {
             skinMeshRender.sharedMaterial = projectionMat;
+           
         }
         else
         {
             skinMeshRender.sharedMaterial = normalMat;
         }
-
+        
     }
 }

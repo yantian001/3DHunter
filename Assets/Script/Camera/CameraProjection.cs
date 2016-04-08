@@ -5,20 +5,46 @@ public class CameraProjection : MonoBehaviour
 
     public ColorCorrectionRamp cameraGray;
 
-    
+    public Camera main;
 
+    public Camera animalCamera;
+
+    public Camera animalInternalCamera;
+
+    public LayerMask projectionMask;
+
+    int normalMask;
     // Use this for initialization
     void Start()
     {
-        if(cameraGray == null)
+        if (cameraGray == null)
         {
             cameraGray = GetComponent<ColorCorrectionRamp>();
-            if(cameraGray == null)
+            if (cameraGray == null)
             {
                 cameraGray = gameObject.AddComponent<ColorCorrectionRamp>();
             }
         }
-        cameraGray.enabled = false;
+        normalMask = main.cullingMask;
+        SetComponentEnable(false);
+    }
+
+
+    void SetComponentEnable(bool enable)
+    {
+        if (cameraGray)
+        {
+            cameraGray.enabled = enable;
+        }
+        if (animalCamera)
+        {
+            animalCamera.gameObject.SetActive( enable);
+        }
+        if (animalInternalCamera)
+        {
+            animalInternalCamera.gameObject.SetActive(enable);
+        }
+
     }
 
     public void Awake()
@@ -34,6 +60,16 @@ public class CameraProjection : MonoBehaviour
     void OnProjection(LTEvent evt)
     {
         bool isInProjection = ConvertUtil.ToBool(evt.data);
+        if (isInProjection == true)
+        {
+            main.cullingMask = projectionMask;
+        }
+        else
+        {
+            main.cullingMask = normalMask;
+        }
+        SetComponentEnable(isInProjection);
+       
         cameraGray.enabled = isInProjection;
     }
 }
