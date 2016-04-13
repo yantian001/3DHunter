@@ -37,7 +37,8 @@ public class FPSInputMobileController : MonoBehaviour
     {
 
         Vector2 aimDir = new Vector2(CnInputManager.GetAxis(aimHorizontal), CnInputManager.GetAxis(aimVertical)) * touchSensMult;
-       // Debug.Log(aimDir);
+        
+        // Debug.Log(aimDir);
         FPSmotor.Aim(aimDir);
         ////MouseLock.MouseLocked = false;
 
