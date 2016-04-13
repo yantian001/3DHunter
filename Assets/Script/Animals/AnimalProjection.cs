@@ -4,9 +4,12 @@ using System.Collections;
 public class AnimalProjection : MonoBehaviour
 {
 
-    public Material projectionMat;
-
-    public Material normalMat;
+    public Material[] projectionMat;
+    /// <summary>
+    /// 
+    /// </summary>
+    [HideInInspector]
+    public Material[] normalMat;
 
     public SkinnedMeshRenderer skinMeshRender;
 
@@ -22,10 +25,9 @@ public class AnimalProjection : MonoBehaviour
             }
         }
 
-        if (normalMat == null)
-        {
-            normalMat = skinMeshRender.sharedMaterial;
-        }
+
+        normalMat = skinMeshRender.sharedMaterials;
+
     }
 
     public void Awake()
@@ -44,15 +46,16 @@ public class AnimalProjection : MonoBehaviour
             return;
 
         bool isInProjection = ConvertUtil.ToBool(evt.data);
-        if (isInProjection && projectionMat)
+        if (isInProjection && projectionMat != null)
         {
-            skinMeshRender.sharedMaterial = projectionMat;
-           
+            skinMeshRender.sharedMaterials = projectionMat;
+
         }
         else
         {
-            skinMeshRender.sharedMaterial = normalMat;
+
+            skinMeshRender.sharedMaterials = normalMat;
         }
-        
+
     }
 }

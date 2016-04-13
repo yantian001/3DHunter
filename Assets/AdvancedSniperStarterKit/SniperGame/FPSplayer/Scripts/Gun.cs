@@ -31,7 +31,9 @@ public class Gun : MonoBehaviour
     public float MouseSensitive = 1;
     public float MouseStability = 20.5f;
     public bool Zooming;
+    public bool ZoomingBeforeReload;
     public float MaxZoom = 6.0f;
+    public float Infrared = 8f;
     public bool SemiAuto;
     public bool InfinityAmmo = true;
     public int BulletNum = 1;
@@ -57,7 +59,7 @@ public class Gun : MonoBehaviour
     public string BoltPose = "Bolt";
     [HideInInspector]
     public FPSController FPSmotor;
-
+    [HideInInspector]
     public float CurrentZoom = 2f;
 
     void Start()
@@ -187,6 +189,7 @@ public class Gun : MonoBehaviour
                 // Countdown to idle state
                 if (Time.time >= cooldowntime + CooldownTime)
                 {
+
                     gunState = 0;
                 }
                 break;
@@ -211,6 +214,7 @@ public class Gun : MonoBehaviour
                             }
                         }
                     }
+
                 }
                 if (GetComponent<Animation>()[BoltPose].normalizedTime > 0.9f)
                 {
@@ -221,6 +225,8 @@ public class Gun : MonoBehaviour
                     {
                         audiosource.PlayOneShot(SoundBoltEnd);
                     }
+                    LeanTween.delayedCall(0.5f, () => { Zoom(ZoomingBeforeReload); });
+
                 }
                 break;
             case 3:
@@ -230,9 +236,10 @@ public class Gun : MonoBehaviour
                     if (AmmoPack > 0 || InfinityAmmo)
                     {
                         GetComponent<Animation>().clip = GetComponent<Animation>()[ReloadPose].clip;
-                        GetComponent<Animation>().CrossFade(ReloadPose, 0.5f, PlayMode.StopAll);
+                        GetComponent<Animation>().CrossFade(ReloadPose, 0.2f, PlayMode.StopAll);
                         gunState = 4;
-                        Zooming = false;
+                        ZoomingBeforeReload = Zooming;
+                        Zoom(false);
                         if (SoundReloadStart && audiosource != null)
                         {
                             audiosource.PlayOneShot(SoundReloadStart);
@@ -260,6 +267,7 @@ public class Gun : MonoBehaviour
                     if (GetComponent<Animation>()[ReloadPose].normalizedTime > 0.8f)
                     {
                         gunState = 0;
+
                         if (InfinityAmmo)
                         {
                             Clip = ClipSize;
@@ -321,10 +329,10 @@ public class Gun : MonoBehaviour
         {
             if (ZoomFOVLists.Length > 0)
             {
-                MouseSensitiveZoom = ((MouseSensitive *0.16f) / 10) *  (fovTemp / CurrentZoom);
+                MouseSensitiveZoom = ((MouseSensitive * 0.16f) / 10) * (fovTemp / CurrentZoom);
                 //  NormalCamera.GetComponent<Camera>().fieldOfView += (ZoomFOVLists[IndexZoom] - NormalCamera.GetComponent<Camera>().fieldOfView) / 10;
                 NormalCamera.GetComponent<Camera>().fieldOfView += ((fovTemp / CurrentZoom) - NormalCamera.GetComponent<Camera>().fieldOfView) / 10;
-                
+
             }
         }
         else
@@ -377,6 +385,12 @@ public class Gun : MonoBehaviour
     public void Zoom()
     {
         Zooming = !Zooming;
+        LeanTween.dispatchEvent((int)Events.ZOOM, Zooming);
+    }
+
+    public void Zoom(bool z)
+    {
+        Zooming = z;
         LeanTween.dispatchEvent((int)Events.ZOOM, Zooming);
     }
 

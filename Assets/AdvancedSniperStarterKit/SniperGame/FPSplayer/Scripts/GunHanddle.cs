@@ -67,7 +67,9 @@ public class GunHanddle : MonoBehaviour
     public void Zoom()
     {
         if (CurrentGun)
+        {
             CurrentGun.Zoom();
+        }
     }
     public void ZoomToggle()
     {

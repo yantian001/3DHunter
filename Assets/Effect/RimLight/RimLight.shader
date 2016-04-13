@@ -14,7 +14,7 @@
 			Tags{ "Queue" = "Transparent"}
 			Blend SrcAlpha OneMinusSrcAlpha
 			CGPROGRAM
-			#pragma surface surf Lambert 
+			#pragma surface surf Lambert alpha
 			struct Input {
 				float2 uv_MainTex;
 				//float uv_BumpMap;
@@ -27,7 +27,7 @@
 			void surf(Input IN, inout SurfaceOutput o) {
 				 half4 c = tex2D(_MainTex, IN.uv_MainTex);
 				 o.Albedo = c.rgb;
-				 //o.Alpha = _Alpha;
+				 o.Alpha = _Alpha;
 				// o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
 
 				half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));

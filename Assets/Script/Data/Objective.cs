@@ -79,4 +79,42 @@ public class Objective : ScriptableObject
     [Tooltip("武器弹夹数量要求")]
     public float capacityRequired = -1f;
 
+    public int GetAnimalId ()
+    {
+        int id = -1;
+        Animal animal = targetObjects.GetComponent<Animal>();
+        if (animal)
+            id = animal.Id;
+        return id;
+    }
+
+    public string GetObjString()
+    {
+        string AnimalName = "";
+        if (targetObjects)
+        {
+            Animal animal = targetObjects.GetComponent<Animal>();
+            if (animal)
+            {
+                AnimalName = animal.name;
+            }
+        }
+
+        string type = "";
+        switch (objectiveType)
+        {
+            case ObjectiveType.HEADKILL:
+                type = "with a HEAD shot ";
+                break;
+            case ObjectiveType.HEARTKILL:
+                type = "with a HEART shot ";
+                break;
+            case ObjectiveType.LUNGKILL:
+                type = "with a LUNG shot";
+                break;
+            default:
+                break;
+        }
+        return string.Format("Target:Kill {0} {1} {2}", objectiveCount, AnimalName, type);
+    }
 }

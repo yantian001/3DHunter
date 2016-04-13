@@ -41,4 +41,11 @@
     /// 打开狙击镜
     /// </summary>
     ZOOM,
+    //红外线时间结束
+    PROJECTIONTIMEOUT,
+    ANIMALWARNED,
+    /// <summary>
+    /// 游戏预览转到开始
+    /// </summary>
+    PREVIEWSTART,
 }

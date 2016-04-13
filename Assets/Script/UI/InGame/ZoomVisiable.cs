@@ -10,7 +10,12 @@ public class ZoomVisiable : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void OnDestroy()
+    {
+        LeanTween.removeListener((int)Events.ZOOM, OnZoom);
+    }
 
+   
     public void OnZoom(LTEvent evt)
     {
         bool zoom = ConvertUtil.ToBool(evt.data);

@@ -20,15 +20,31 @@ public class GameManager : MonoBehaviour
         //监听死亡
         LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
+        LeanTween.addListener((int)Events.GAMEPAUSE, OnPause);
 
     }
-
-  
-
+    
     public void OnDestroy()
     {
         LeanTween.removeListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.removeListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
+    }
+
+    void OnPause(LTEvent evt)
+    {
+        if (gameStatu == GameStatu.InGame)
+        {
+            ChangeGameStatu(GameStatu.Paused);
+        }
+
+        LeanTween.addListener((int)Events.GAMECONTINUE, OnContinue);
+    }
+
+    void OnContinue(LTEvent evt)
+    {
+        LeanTween.removeListener((int)Events.GAMECONTINUE, OnContinue);
+        ChangeGameStatu(GameStatu.InGame);
+        //  Time.timeScale = 1;
     }
 
     private void OnEnemyCleared(LTEvent obj)
