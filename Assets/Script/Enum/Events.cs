@@ -37,4 +37,8 @@
     ENEMYCLEARED,
     ENEMYAWAY,
     PROJECTION,
+    /// <summary>
+    /// 打开狙击镜
+    /// </summary>
+    ZOOM,
 }

@@ -31,6 +31,7 @@ public class Gun : MonoBehaviour
     public float MouseSensitive = 1;
     public float MouseStability = 20.5f;
     public bool Zooming;
+    public float MaxZoom = 6.0f;
     public bool SemiAuto;
     public bool InfinityAmmo = true;
     public int BulletNum = 1;
@@ -56,6 +57,8 @@ public class Gun : MonoBehaviour
     public string BoltPose = "Bolt";
     [HideInInspector]
     public FPSController FPSmotor;
+
+    public float CurrentZoom = 2f;
 
     void Start()
     {
@@ -318,8 +321,10 @@ public class Gun : MonoBehaviour
         {
             if (ZoomFOVLists.Length > 0)
             {
-                MouseSensitiveZoom = ((MouseSensitive *0.16f) / 10) * ZoomFOVLists[IndexZoom];
-                NormalCamera.GetComponent<Camera>().fieldOfView += (ZoomFOVLists[IndexZoom] - NormalCamera.GetComponent<Camera>().fieldOfView) / 10;
+                MouseSensitiveZoom = ((MouseSensitive *0.16f) / 10) *  (fovTemp / CurrentZoom);
+                //  NormalCamera.GetComponent<Camera>().fieldOfView += (ZoomFOVLists[IndexZoom] - NormalCamera.GetComponent<Camera>().fieldOfView) / 10;
+                NormalCamera.GetComponent<Camera>().fieldOfView += ((fovTemp / CurrentZoom) - NormalCamera.GetComponent<Camera>().fieldOfView) / 10;
+                
             }
         }
         else
@@ -372,6 +377,7 @@ public class Gun : MonoBehaviour
     public void Zoom()
     {
         Zooming = !Zooming;
+        LeanTween.dispatchEvent((int)Events.ZOOM, Zooming);
     }
 
     public void ZoomToggle()
