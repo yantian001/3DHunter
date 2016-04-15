@@ -81,7 +81,7 @@ public class PreviewCamera : MonoBehaviour
         if (cameraPreview)
         {
             cameraPreview = false;
-            cams = (Camera[])GameObject.FindObjectsOfType(typeof(Camera));
+            //cams = (Camera[])GameObject.FindObjectsOfType(typeof(Camera));
             if (cameraEnabledTemp != null && cams != null)
             {
                 if (cams.Length > 0 && cameraEnabledTemp.Length > 0 && cameraEnabledTemp.Length == cams.Length)

@@ -48,6 +48,8 @@ public class Objective : ScriptableObject
     [Tooltip("任务奖励")]
     public float reward = 0;
 
+    public float punish = 0;
+
     /// <summary>
     /// 非任务目标对象
     /// </summary>

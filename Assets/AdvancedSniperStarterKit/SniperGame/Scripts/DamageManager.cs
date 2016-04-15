@@ -27,11 +27,18 @@ public class DamageManager : MonoBehaviour
     int maxHp = 0;
     HitPosition hpos;
     public int depth = 0;
+
+    Animal animal;
     void Start()
     {
         if (behavior == null)
         {
             behavior = GetComponent<BehaviorTree>();
+        }
+
+        if(animal == null)
+        {
+            animal = GetComponent<Animal>();
         }
         maxHp = hp;
     }
@@ -152,6 +159,7 @@ public class DamageManager : MonoBehaviour
     {
         //Debug.Log(GUI.depth);
         GUI.depth = 3;
+
         Debug.Log(GUI.depth);
         if (isEnemy && showHitTips)
         {
@@ -176,12 +184,16 @@ public class DamageManager : MonoBehaviour
                 //得到真实NPC头顶的2D坐标
                 position = new Vector2(position.x, Screen.height - position.y);
 
-                Vector2 bloodSize = GUI.skin.label.CalcSize(new GUIContent(hpSlider));
+                Vector2 nameSize = GUI.skin.label.CalcSize(new GUIContent(animal.Name));
 
+                GUI.Label(new Rect(10, 50, nameSize.x, nameSize.y), animal.name);
+
+                Vector2 bloodSize = GUI.skin.horizontalSlider.CalcSize(new GUIContent(hpSlider));
+                Debug.Log(bloodSize);
                 //通过血值计算红色血条显示区域
                 int blood_width = hpSlider.width * hp / maxHp;
                 //先绘制黑色血条
-                GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, bloodSize.x, bloodSize.y), hpSliderBg);
+                GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, bloodSize.x, bloodSize.y ), hpSliderBg);
                 //在绘制红色血条
                 GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, blood_width, bloodSize.y), hpSlider);
 

@@ -71,7 +71,15 @@ public class Finish : MonoBehaviour
         }
 
         float rewardRate = 1f + Random.Range(-0.2f, 0.5f);
-        int reward = Mathf.CeilToInt(rewardRate * GameValue.s_currentObjective.reward);
+        int reward = 0;
+        if(succed)
+        {
+            reward= Mathf.CeilToInt(rewardRate * GameValue.s_currentObjective.reward);
+        }
+        else
+        {
+            reward = Mathf.CeilToInt(rewardRate * GameValue.s_currentObjective.punish);
+        }
         Debug.Log("get reward " + reward);
         LeanTween.dispatchEvent((int)Events.MONEYUSED, -reward);
         RectTransform rctReward = CommonUtils.GetChild(rect, "Middle/RewardDisplay");
@@ -110,14 +118,6 @@ public class Finish : MonoBehaviour
     public void OnDisable()
     {
         LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
-
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

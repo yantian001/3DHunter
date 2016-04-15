@@ -20,14 +20,14 @@ public class Creator : MonoBehaviour
 
     public void Awake()
     {
-        LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
+       // LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.ENEMYAWAY, OnEnemyDie);
       
     }
 
     public void OnDestroy()
     {
-        LeanTween.removeListener((int)Events.ENEMYDIE, OnEnemyDie);
+        //LeanTween.removeListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.removeListener((int)Events.ENEMYAWAY, OnEnemyDie);
     }
 
