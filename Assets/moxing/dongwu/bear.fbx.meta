@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 8ca1d7515d801044ab37ae853b8b0654
+timeCreated: 1460620378
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bear
+    100004: bear 1
+    100006: bear_bone_0
+    100008: bear_bone_1
+    100010: bear_bone_10
+    100012: bear_bone_11
+    100014: bear_bone_12
+    100016: bear_bone_13
+    100018: bear_bone_14
+    100020: bear_bone_15
+    100022: bear_bone_16
+    100024: bear_bone_17
+    100026: bear_bone_18
+    100028: bear_bone_19
+    100030: bear_bone_2
+    100032: bear_bone_20
+    100034: bear_bone_21
+    100036: bear_bone_22
+    100038: bear_bone_23
+    100040: bear_bone_24
+    100042: bear_bone_25
+    100044: bear_bone_26
+    100046: bear_bone_27
+    100048: bear_bone_3
+    100050: bear_bone_4
+    100052: bear_bone_5
+    100054: bear_bone_50
+    100056: bear_bone_6
+    100058: bear_bone_7
+    100060: bear_bone_8
+    100062: bear_bone_9
+    400000: //RootNode
+    400002: bear
+    400004: bear 1
+    400006: bear_bone_0
+    400008: bear_bone_1
+    400010: bear_bone_10
+    400012: bear_bone_11
+    400014: bear_bone_12
+    400016: bear_bone_13
+    400018: bear_bone_14
+    400020: bear_bone_15
+    400022: bear_bone_16
+    400024: bear_bone_17
+    400026: bear_bone_18
+    400028: bear_bone_19
+    400030: bear_bone_2
+    400032: bear_bone_20
+    400034: bear_bone_21
+    400036: bear_bone_22
+    400038: bear_bone_23
+    400040: bear_bone_24
+    400042: bear_bone_25
+    400044: bear_bone_26
+    400046: bear_bone_27
+    400048: bear_bone_3
+    400050: bear_bone_4
+    400052: bear_bone_5
+    400054: bear_bone_50
+    400056: bear_bone_6
+    400058: bear_bone_7
+    400060: bear_bone_8
+    400062: bear_bone_9
+    4300000: bear
+    7400000: Walk [0]
+    7400002: Run [1]
+    7400004: Stand [2]
+    7400006: Death [10]
+    7400008: Stand [11]
+    7400010: BattleRoar [20]
+    7400012: SitGround [28]
+    7400014: SitGroundDown [29]
+    7400016: SitGroundUp [30]
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: bear
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
