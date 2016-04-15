@@ -64,6 +64,6 @@ public class ProjectionButton : MonoBehaviour
 
     void Dispatch()
     {
-        LeanTween.dispatchEvent((int)Events.PROJECTION, isInProjection && !isZoomBroke);
+        LeanTween.dispatchEvent((int)Events.PROJECTION, isInProjection && !isZoomBroke && GameValue.staus == GameStatu.InGame);
     }
 }

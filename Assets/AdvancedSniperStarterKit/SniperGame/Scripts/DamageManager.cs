@@ -11,14 +11,29 @@ public class DamageManager : MonoBehaviour
     private bool isDied = false;
     public bool isEnemy = true;
 
-    public BehaviorTree behavior;
+    public float tipsTime = 0.5f;
 
+    public float tipsSpeed = 100f;
+
+    public float hight = 2;
+
+    public Texture2D hpSliderBg;
+
+    public Texture2D hpSlider;
+    float tipStartTime = 0f;
+
+    bool showHitTips = false;
+    public BehaviorTree behavior;
+    int maxHp = 0;
+    HitPosition hpos;
+    public int depth = 0;
     void Start()
     {
-        if(behavior == null)
+        if (behavior == null)
         {
             behavior = GetComponent<BehaviorTree>();
         }
+        maxHp = hp;
     }
 
     void Update()
@@ -27,6 +42,13 @@ public class DamageManager : MonoBehaviour
         {
             Dead(Random.Range(0, deadbody.Length));
             isDied = true;
+            showHitTips = true;
+            tipStartTime = Time.time;
+        }
+        if(showHitTips)
+        {
+            if (tipStartTime + tipsTime <= Time.time)
+                showHitTips = false;
         }
     }
 
@@ -58,9 +80,9 @@ public class DamageManager : MonoBehaviour
 
     public void ApplyDamage(int damage, Vector3 velosity, float distance, int suffix, HitPosition hitPos)
     {
-     //   Debug.Log(Vector3.Dot(velosity.normalized, transform.forward));
-       // Debug.Log(Vector3.Cross(transform.forward, velosity.normalized).magnitude);
-
+        //   Debug.Log(Vector3.Dot(velosity.normalized, transform.forward));
+        // Debug.Log(Vector3.Cross(transform.forward, velosity.normalized).magnitude);
+        hpos = hitPos;
         if (hp <= 0)
         {
             return;
@@ -71,20 +93,20 @@ public class DamageManager : MonoBehaviour
         {
             behavior.SetVariableValue("IsDead", true);
             // Vector3.Cross(transform.forward,velosity.normalized)
-           //if(Vector3.Dot(velosity.normalized,transform.forward) > 0)
-           if(Vector3.Cross(transform.forward, velosity.normalized).y > 0)
+            //if(Vector3.Dot(velosity.normalized,transform.forward) > 0)
+            if (Vector3.Cross(transform.forward, velosity.normalized).y > 0)
             {
                 //animation.CrossFade("Death-Right", 0.1f, PlayMode.StopAll);
                 behavior.SetVariableValue("deathAnimation", "Death-Right");
             }
-           else
+            else
             {
                 //animation.CrossFade("Death-Left", 0.1f, PlayMode.StopAll);
                 // behavior.SendEvent<object>("Dead", 2);
                 behavior.SetVariableValue("deathAnimation", "Death-Left");
             }
         }
-        
+
     }
 
     public void Dead(int suffix, HitPosition hitPos)
@@ -116,7 +138,7 @@ public class DamageManager : MonoBehaviour
 
     public void AfterDead(int suffix, HitPosition pos = HitPosition.NONE)
     {
-      
+
         EnemyDeadInfo edi = new EnemyDeadInfo();
         edi.score = Score;
         edi.transform = this.transform;
@@ -126,6 +148,46 @@ public class DamageManager : MonoBehaviour
         LeanTween.dispatchEvent((int)Events.ENEMYDIE, edi);
     }
 
+    public void OnGUI()
+    {
+        //Debug.Log(GUI.depth);
+        GUI.depth = 3;
+        Debug.Log(GUI.depth);
+        if (isEnemy && showHitTips)
+        {
+            //Debug.Log(gameObject.name);
+            Vector3 v3 = Camera.main.WorldToScreenPoint(transform.position);
+            string name = hpos.ToString() + " SHOT";
+            Vector2 textSize = GUI.skin.label.CalcSize(new GUIContent(name));
+            GUI.color = Color.green;
+            float hight = Screen.height - v3.y + (Time.time - tipStartTime) * tipsSpeed;
+            GUI.Label(new Rect(v3.x, hight, textSize.x, textSize.y), name);
+           
+        }
+
+        if(isEnemy && !isDied)
+        {
+            if(hp < maxHp)
+            {
+                //默认NPC坐标点在脚底下，所以这里加上npcHeight它模型的高度即可
+                Vector3 worldPosition = new Vector3(transform.position.x, transform.position.y + hight, transform.position.z);
+                //根据NPC头顶的3D坐标换算成它在2D屏幕中的坐标
+                Vector2 position = Camera.main.WorldToScreenPoint(worldPosition);
+                //得到真实NPC头顶的2D坐标
+                position = new Vector2(position.x, Screen.height - position.y);
+
+                Vector2 bloodSize = GUI.skin.label.CalcSize(new GUIContent(hpSlider));
+
+                //通过血值计算红色血条显示区域
+                int blood_width = hpSlider.width * hp / maxHp;
+                //先绘制黑色血条
+                GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, bloodSize.x, bloodSize.y), hpSliderBg);
+                //在绘制红色血条
+                GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, blood_width, bloodSize.y), hpSlider);
+
+            }
+        }
+    }
 
     public void Dead(int suffix)
     {

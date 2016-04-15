@@ -48,14 +48,11 @@ public class RoundSlider : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             maxTime = gunHanddle.CurrentGun.MaxZoom - 2;
             aimTime = gunHanddle.CurrentGun.CurrentZoom;
             text.text = string.Format("{0:##0.0} X", aimTime);
-
         }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-       
-
         currentRotationZ = eventData.delta.y / smooth;
         float rot = ClampEngle(preRotationZ + currentRotationZ, maxEngle, minEngle);
         currentRotationZ = rot - preRotationZ;
@@ -83,6 +80,6 @@ public class RoundSlider : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void Update()
     {
-        Debug.Log("2");
+      //  Debug.Log("2");
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class GunHanddle : MonoBehaviour
 {
@@ -22,37 +23,54 @@ public class GunHanddle : MonoBehaviour
             if (FPScamera)
                 Guns[i].NormalCamera = FPScamera;
             Guns[i].fovTemp = FPScamera.fieldOfView;
-            if(Guns[i].positionTemp == Vector3.zero)
+            if (Guns[i].positionTemp == Vector3.zero)
             {
                 Guns[i].positionTemp = Guns[i].transform.localPosition;
             }
         }
+        //SwitchGun();
+      
+    }
+
+    private void OnPreviewStart(LTEvent obj)
+    {
+        // throw new NotImplementedException();
         SwitchGun();
+    }
+
+    public void Awake()
+    {
         LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+        LeanTween.addListener((int)Events.PREVIEWSTART, OnPreviewStart);
     }
 
     public void OnDisable()
     {
         LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
+        LeanTween.removeListener((int)Events.PREVIEWSTART, OnPreviewStart);
     }
 
 
     void OnGameFinish(LTEvent evt)
     {
-        if (evt.data != null)
+        //if (evt.data != null)
+        //{
+        //    GameRecords record = evt.data as GameRecords;
+        //    if (record != null)
+        //    {
+        //        if (record.FinishType == GameFinishType.Failed)
+        //        {
+        //            //hide gun
+        //            for(int i= 0;i<Guns.Length;i++)
+        //            {
+        //                Guns[GunIndex].SetActive(false);
+        //            }
+        //        }
+        //    }
+        //}
+        for (int i = 0; i < Guns.Length; i++)
         {
-            GameRecords record = evt.data as GameRecords;
-            if (record != null)
-            {
-                if (record.FinishType == GameFinishType.Failed)
-                {
-                    //hide gun
-                    for(int i= 0;i<Guns.Length;i++)
-                    {
-                        Guns[GunIndex].SetActive(false);
-                    }
-                }
-            }
+            Guns[GunIndex].SetActive(false);
         }
     }
 
@@ -95,8 +113,8 @@ public class GunHanddle : MonoBehaviour
     }
     public void SwitchGun(int index)
     {
-        if (FPScamera.enabled)
-        {
+        //if (FPScamera.enabled)
+      //  {
             for (int i = 0; i < Guns.Length; i++)
             {
                 Hide(Guns[i].gameObject, false);
@@ -109,7 +127,7 @@ public class GunHanddle : MonoBehaviour
                 Hide(Guns[GunIndex].gameObject, true);
                 Guns[GunIndex].SetActive(true);
             }
-        }
+    //    }
     }
 
     public void SwitchGun()
@@ -119,7 +137,7 @@ public class GunHanddle : MonoBehaviour
         while (true)
         {
             if (index >= Guns.Length)
-                index =index - Guns.Length;
+                index = index - Guns.Length;
             if (Player.CurrentUser.IsGunActived(Guns[index].id))
             {
                 SwitchGun(index);

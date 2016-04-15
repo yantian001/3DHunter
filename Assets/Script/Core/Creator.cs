@@ -9,6 +9,11 @@ public class Creator : MonoBehaviour
     int exsitCount = 0;
     void Start()
     {
+
+    }
+
+    public void OnEnable()
+    {
         targets = FindObjectsOfType<TargetPosition>();
         CreateTarget();
     }
@@ -17,6 +22,7 @@ public class Creator : MonoBehaviour
     {
         LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.ENEMYAWAY, OnEnemyDie);
+      
     }
 
     public void OnDestroy()

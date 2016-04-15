@@ -154,6 +154,41 @@ public class CommonUtils
             }
         }
     }
+    /// <summary>
+    /// 获得子节点
+    /// </summary>
+    /// <param name="parent"></param>
+    /// <param name="child"></param>
+    /// <returns></returns>
+    public static RectTransform GetChild(RectTransform parent, string child)
+    {
+        RectTransform rect = null;
+        if (parent != null)
+        {
+            Transform t = parent.FindChild(child);
+            if (t)
+            {
+                rect = t.GetComponent<RectTransform>();
+            }
+        }
+        return rect;
+    }
+
+    /// <summary>
+    /// 获取指定子节点的特定类型的组件
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="parent"></param>
+    /// <param name="child"></param>
+    /// <returns></returns>
+    public static T GetChildComponent<T>(RectTransform parent, string child)
+    {
+        T ret = default(T);
+        RectTransform rt = GetChild(parent, child);
+        if (rt)
+            ret = rt.GetComponent<T>();
+        return ret;
+    }
 
     /// <summary>
     /// 检测地面

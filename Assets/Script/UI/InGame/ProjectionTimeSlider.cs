@@ -6,7 +6,7 @@ public class ProjectionTimeSlider : MonoBehaviour
 
     public GunHanddle gunHandle;
 
-    public Slider slider = null;
+    public Image slider = null;
     float maxInfrared = 0.0f;
 
     float remindInfrared = 0.0f;
@@ -22,11 +22,10 @@ public class ProjectionTimeSlider : MonoBehaviour
         remindInfrared = maxInfrared = gunHandle.CurrentGun.Infrared;
         if (slider == null)
         {
-            slider = GetComponent<Slider>();
+            slider = GetComponent<Image>();
         }
 
-        slider.maxValue = maxInfrared;
-        slider.value = remindInfrared;
+        slider.fillAmount = 1;
     }
 
     public void OnEnable()
@@ -54,7 +53,7 @@ public class ProjectionTimeSlider : MonoBehaviour
         {
 
             remindInfrared -= Time.deltaTime;
-            slider.value = remindInfrared;
+            slider.fillAmount = remindInfrared / maxInfrared;
             if (remindInfrared <= 0)
             {
                 isInProjection = false;

@@ -96,7 +96,8 @@ public class Gun : MonoBehaviour
     {
         Active = active;
         this.gameObject.SetActive(active);
-        Zooming = false;
+        //Zooming = false;
+        Zoom(false);
         IndexZoom = 0;
         this.transform.localPosition = positionTemp - (Vector3.up);
 

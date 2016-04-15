@@ -79,6 +79,8 @@ public class Objective : ScriptableObject
     [Tooltip("武器弹夹数量要求")]
     public float capacityRequired = -1f;
 
+    public bool IsFinished = false;
+
     public int GetAnimalId ()
     {
         int id = -1;

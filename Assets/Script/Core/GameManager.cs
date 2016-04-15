@@ -9,11 +9,7 @@ public class GameManager : MonoBehaviour
 
     bool enemyCleared = false;
     public GameStatu gameStatu = GameStatu.Init;
-    // Use this for initialization
-    void Start()
-    {
 
-    }
 
     public void Awake()
     {
@@ -21,30 +17,40 @@ public class GameManager : MonoBehaviour
         LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
         LeanTween.addListener((int)Events.GAMEPAUSE, OnPause);
-
+        LeanTween.addListener((int)Events.PREVIEWSTART, OnPreviewStart);
+        Time.timeScale = 1;
     }
-    
+
+    private void OnPreviewStart(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        ChangeGameStatu(GameStatu.InGame);
+    }
+
     public void OnDestroy()
     {
         LeanTween.removeListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.removeListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
+        LeanTween.removeListener((int)Events.GAMEPAUSE, OnPause);
+        LeanTween.removeListener((int)Events.PREVIEWSTART, OnPreviewStart);
     }
 
     void OnPause(LTEvent evt)
     {
+
         if (gameStatu == GameStatu.InGame)
         {
             ChangeGameStatu(GameStatu.Paused);
         }
-
         LeanTween.addListener((int)Events.GAMECONTINUE, OnContinue);
+        Time.timeScale = 0;
     }
 
     void OnContinue(LTEvent evt)
     {
         LeanTween.removeListener((int)Events.GAMECONTINUE, OnContinue);
         ChangeGameStatu(GameStatu.InGame);
-        //  Time.timeScale = 1;
+        Time.timeScale = 1;
     }
 
     private void OnEnemyCleared(LTEvent obj)
@@ -56,22 +62,43 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (targetKilled >= GameValue.s_currentObjective.objectiveCount)
+        if (IsInGame())
         {
-            ChangeGameStatu(GameStatu.Completed);
-        }
-        else if(enemyCleared && targetKilled <= GameValue.s_currentObjective.objectiveCount)
-        {
-            ChangeGameStatu(GameStatu.Failed);
+            if (targetKilled >= GameValue.s_currentObjective.objectiveCount)
+            {
+                ChangeGameStatu(GameStatu.Completed);
+                OnGameFinish(true);
+            }
+            else if (enemyCleared && targetKilled <= GameValue.s_currentObjective.objectiveCount)
+            {
+                ChangeGameStatu(GameStatu.Failed);
+                OnGameFinish(false);
+            }
         }
     }
 
-    
+    private void OnGameFinish(bool v)
+    {
+        //throw new NotImplementedException();
+        Debug.Log("Game Finish :" + v.ToString());
+        if (v)
+        {
+            GameValue.s_currentObjective.IsFinished = true;
+        }
+        LeanTween.delayedCall(2f, () => { LeanTween.dispatchEvent((int)Events.GAMEFINISH, v); });
+
+    }
+
+    public bool IsInGame()
+    {
+        return gameStatu == GameStatu.InGame;
+    }
 
     void ChangeGameStatu(GameStatu statu)
     {
         gameStatu = statu;
         GameValue.staus = statu;
+        Debug.Log("Game Statu : " + gameStatu.ToString());
         //if (statu == GameStatu.Paused || statu == GameStatu.Failed || statu == GameStatu.Completed)
         //{
         //    BahaviorGlobalVariables.SetVariableValue("InGame", false);

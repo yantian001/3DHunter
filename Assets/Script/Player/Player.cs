@@ -189,7 +189,7 @@ public class Player : MonoBehaviour
     public void OnEnable()
     {
         LeanTween.addListener((int)Events.MONEYUSED, OnMoneyUsed);
-        LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+       // LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
     }
 
     private void OnGameFinish(LTEvent obj)
@@ -228,7 +228,7 @@ public class Player : MonoBehaviour
     public void OnDisable()
     {
         LeanTween.removeListener((int)Events.MONEYUSED, OnMoneyUsed);
-        LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
+      //  LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
     }
 
     void OnMoneyUsed(LTEvent evt)
