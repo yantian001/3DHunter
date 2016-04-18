@@ -59,4 +59,6 @@ public class GameValue
         else
             return MapLevelConfig[mapid-1];
     }
+
+  
 }

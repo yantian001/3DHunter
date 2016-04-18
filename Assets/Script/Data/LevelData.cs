@@ -12,4 +12,22 @@ public class LevelData : ScriptableObject
     public Objective[] objectives;
 
     public Objective bossObjectives;
+
+    public Texture2D mainTexture;
+
+    public Texture2D loopTexture;
+
+    public Vector3 bossLocalPosition;
+    public Vector3 bossScale;
+
+    public Objective GetCurrentObjective()
+    {
+        if(currentLevel >=0 && currentLevel < objectives.Length)
+        {
+            return objectives[currentLevel];
+        }
+        return null;
+    }
+
+
 }

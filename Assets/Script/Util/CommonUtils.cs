@@ -190,6 +190,18 @@ public class CommonUtils
         return ret;
     }
 
+    public static void SetChildComponentActive<T>(Transform t, bool b)
+    {
+        T[] ts = t.GetComponents<T>();
+        if (ts != null)
+        {
+            for (int i = 0; i < ts.Length; i++)
+            {
+                (ts[i] as MonoBehaviour).enabled = b;
+            }
+        }
+    }
+
     /// <summary>
     /// 检测地面
     /// </summary>
@@ -204,4 +216,6 @@ public class CommonUtils
         }
         return position;
     }
+
+
 }

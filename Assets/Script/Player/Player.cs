@@ -126,6 +126,20 @@ public class Player : MonoBehaviour
             SetKeyIntValue("Bomb", value);
         }
     }
+    /// <summary>
+    /// 上次played的场景
+    /// </summary>
+    public int LastPlayedScene
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("lastScene", 0);
+        }
+        set
+        {
+            SetKeyIntValue("lastScene", value);
+        }
+    }
     private static Player _instance = null;
 
     public static Player CurrentUser
