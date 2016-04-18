@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: 7d024fec2c4ec754fb951c6bbe616be9
-timeCreated: 1460716428
-licenseType: Pro
+guid: f3e102c6922cd734991f0e176f32de55
+labels:
+- DrawCall
+- Reduce
+- Optimize
+- Editor
+- Batch
 NativeFormatImporter:
   userData: 
   assetBundleName: 
