@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: c8e6009e255190b48b1cea9d70416ed5
+timeCreated: 1461033959
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ram
+    100004: ram 1
+    100006: ram_bone_0
+    100008: ram_bone_1
+    100010: ram_bone_10
+    100012: ram_bone_11
+    100014: ram_bone_12
+    100016: ram_bone_13
+    100018: ram_bone_14
+    100020: ram_bone_15
+    100022: ram_bone_16
+    100024: ram_bone_17
+    100026: ram_bone_18
+    100028: ram_bone_19
+    100030: ram_bone_2
+    100032: ram_bone_20
+    100034: ram_bone_21
+    100036: ram_bone_22
+    100038: ram_bone_23
+    100040: ram_bone_24
+    100042: ram_bone_25
+    100044: ram_bone_26
+    100046: ram_bone_27
+    100048: ram_bone_28
+    100050: ram_bone_29
+    100052: ram_bone_3
+    100054: ram_bone_30
+    100056: ram_bone_31
+    100058: ram_bone_32
+    100060: ram_bone_33
+    100062: ram_bone_34
+    100064: ram_bone_4
+    100066: ram_bone_5
+    100068: ram_bone_6
+    100070: ram_bone_62
+    100072: ram_bone_7
+    100074: ram_bone_8
+    100076: ram_bone_9
+    400000: //RootNode
+    400002: ram
+    400004: ram 1
+    400006: ram_bone_0
+    400008: ram_bone_1
+    400010: ram_bone_10
+    400012: ram_bone_11
+    400014: ram_bone_12
+    400016: ram_bone_13
+    400018: ram_bone_14
+    400020: ram_bone_15
+    400022: ram_bone_16
+    400024: ram_bone_17
+    400026: ram_bone_18
+    400028: ram_bone_19
+    400030: ram_bone_2
+    400032: ram_bone_20
+    400034: ram_bone_21
+    400036: ram_bone_22
+    400038: ram_bone_23
+    400040: ram_bone_24
+    400042: ram_bone_25
+    400044: ram_bone_26
+    400046: ram_bone_27
+    400048: ram_bone_28
+    400050: ram_bone_29
+    400052: ram_bone_3
+    400054: ram_bone_30
+    400056: ram_bone_31
+    400058: ram_bone_32
+    400060: ram_bone_33
+    400062: ram_bone_34
+    400064: ram_bone_4
+    400066: ram_bone_5
+    400068: ram_bone_6
+    400070: ram_bone_62
+    400072: ram_bone_7
+    400074: ram_bone_8
+    400076: ram_bone_9
+    4300000: ram
+    7400000: Walk [0]
+    7400002: Stand [1]
+    7400004: CombatCritical [3]
+    7400006: Death [7]
+    7400008: Stand [15]
+    7400010: Run [21]
+    9500000: //RootNode
+    13700000: ram
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
