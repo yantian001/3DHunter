@@ -87,6 +87,7 @@ ModelImporter:
     7400008: Death [8]
     7400010: Stand [12]
     7400012: Stand [13]
+    7400014: Stand [12]0
     9500000: //RootNode
     13700000: tiger
   materials:
@@ -102,13 +103,813 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Stand [0]
+      takeName: Stand [0]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk [1]
+      takeName: Walk [1]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run [2]
+      takeName: Run [2]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: CombatCritical [7]
+      takeName: CombatCritical [7]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death [8]
+      takeName: Death [8]
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Stand [12]
+      takeName: Stand [12]
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Stand [13]
+      takeName: Stand [13]
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Stand [12]0
+      takeName: Stand [12]
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: tiger
+        weight: 1
+      - path: tiger 1
+        weight: 1
+      - path: tiger 1/tiger_bone_0
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_4
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_15/tiger_bone_20/tiger_bone_25/tiger_bone_28
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_16/tiger_bone_21/tiger_bone_26/tiger_bone_29/tiger_bone_31
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_1/tiger_bone_5/tiger_bone_9/tiger_bone_17/tiger_bone_22/tiger_bone_27/tiger_bone_30/tiger_bone_32
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_6/tiger_bone_10/tiger_bone_18/tiger_bone_23
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_2/tiger_bone_7/tiger_bone_11/tiger_bone_19/tiger_bone_24
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_12
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_13
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_8/tiger_bone_14
+        weight: 1
+      - path: tiger 1/tiger_bone_0/tiger_bone_3/tiger_bone_54
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
