@@ -16,140 +16,144 @@ namespace GameDataEditor
     public class GDEWeaponData : IGDEData
     {
         private static string OwnedKey = "Owned";
-		private bool _Owned;
+        private bool _Owned;
         public bool Owned
         {
             get { return _Owned; }
-            set {
+            set
+            {
                 if (_Owned != value)
                 {
                     _Owned = value;
-                    GDEDataManager.SetBool(_key+"_"+OwnedKey, _Owned);
+                    GDEDataManager.SetBool(_key + "_" + OwnedKey, _Owned);
                 }
             }
         }
 
         private static string EquippedKey = "Equipped";
-		private bool _Equipped;
+        private bool _Equipped;
         public bool Equipped
         {
             get { return _Equipped; }
-            set {
+            set
+            {
                 if (_Equipped != value)
                 {
                     _Equipped = value;
-                    GDEDataManager.SetBool(_key+"_"+EquippedKey, _Equipped);
+                    GDEDataManager.SetBool(_key + "_" + EquippedKey, _Equipped);
                 }
             }
         }
 
         private static string IdKey = "Id";
-		private int _Id;
+        private int _Id;
         public int Id
         {
             get { return _Id; }
-            set {
+            set
+            {
                 if (_Id != value)
                 {
                     _Id = value;
-                    GDEDataManager.SetInt(_key+"_"+IdKey, _Id);
+                    GDEDataManager.SetInt(_key + "_" + IdKey, _Id);
                 }
             }
         }
 
         private static string NameKey = "Name";
-		private string _Name;
+        private string _Name;
         public string Name
         {
             get { return _Name; }
-            set {
+            set
+            {
                 if (_Name != value)
                 {
                     _Name = value;
-                    GDEDataManager.SetString(_key+"_"+NameKey, _Name);
+                    GDEDataManager.SetString(_key + "_" + NameKey, _Name);
                 }
             }
         }
 
         private static string PriceKey = "Price";
-		private string _Price;
+        private string _Price;
         public string Price
         {
             get { return _Price; }
-            set {
+            set
+            {
                 if (_Price != value)
                 {
                     _Price = value;
-                    GDEDataManager.SetString(_key+"_"+PriceKey, _Price);
+                    GDEDataManager.SetString(_key + "_" + PriceKey, _Price);
                 }
             }
         }
 
         private static string WeaponModulKey = "WeaponModul";
-		private GameObject _WeaponModul;
+        private GameObject _WeaponModul;
         public GameObject WeaponModul
         {
             get { return _WeaponModul; }
-            set {
+            set
+            {
                 if (_WeaponModul != value)
                 {
                     _WeaponModul = value;
-                    GDEDataManager.SetGameObject(_key+"_"+WeaponModulKey, _WeaponModul);
+                    GDEDataManager.SetGameObject(_key + "_" + WeaponModulKey, _WeaponModul);
                 }
             }
         }
 
         private static string WeaponAttributesKey = "WeaponAttributes";
-		public List<GDEWeaponAttributeData>      WeaponAttributes;
-		public void Set_WeaponAttributes()
+        public List<GDEWeaponAttributeData> WeaponAttributes;
+        public void Set_WeaponAttributes()
         {
-	        GDEDataManager.SetCustomList(_key+"_"+WeaponAttributesKey, WeaponAttributes);
-		}
-		
+            GDEDataManager.SetCustomList(_key + "_" + WeaponAttributesKey, WeaponAttributes);
+        }
+
 
         public GDEWeaponData()
-		{
-			_key = string.Empty;
-		}
+        {
+            _key = string.Empty;
+        }
 
-		public GDEWeaponData(string key)
-		{
-			_key = key;
-		}
-		
+        public GDEWeaponData(string key)
+        {
+            _key = key;
+        }
+
         public override void LoadFromDict(string dataKey, Dictionary<string, object> dict)
         {
             _key = dataKey;
 
-			if (dict == null)
-				LoadFromSavedData(dataKey);
-			else
-			{
+            if (dict == null)
+                LoadFromSavedData(dataKey);
+            else
+            {
                 dict.TryGetBool(OwnedKey, out _Owned);
                 dict.TryGetBool(EquippedKey, out _Equipped);
                 dict.TryGetInt(IdKey, out _Id);
                 dict.TryGetString(NameKey, out _Name);
                 dict.TryGetString(PriceKey, out _Price);
                 dict.TryGetGameObject(WeaponModulKey, out _WeaponModul);
-
                 dict.TryGetCustomList(WeaponAttributesKey, out WeaponAttributes);
                 LoadFromSavedData(dataKey);
-			}
-		}
+            }
+        }
 
         public override void LoadFromSavedData(string dataKey)
-		{
-			_key = dataKey;
-			
-            _Owned = GDEDataManager.GetBool(_key+"_"+OwnedKey, _Owned);
-            _Equipped = GDEDataManager.GetBool(_key+"_"+EquippedKey, _Equipped);
-            _Id = GDEDataManager.GetInt(_key+"_"+IdKey, _Id);
-            _Name = GDEDataManager.GetString(_key+"_"+NameKey, _Name);
-            _Price = GDEDataManager.GetString(_key+"_"+PriceKey, _Price);
-            _WeaponModul = GDEDataManager.GetGameObject(_key+"_"+WeaponModulKey, _WeaponModul);
+        {
+            _key = dataKey;
+            _Owned = GDEDataManager.GetBool(_key + "_" + OwnedKey, _Owned);
+            _Equipped = GDEDataManager.GetBool(_key + "_" + EquippedKey, _Equipped);
+            _Id = GDEDataManager.GetInt(_key + "_" + IdKey, _Id);
+            _Name = GDEDataManager.GetString(_key + "_" + NameKey, _Name);
+            _Price = GDEDataManager.GetString(_key + "_" + PriceKey, _Price);
+            _WeaponModul = GDEDataManager.GetGameObject(_key + "_" + WeaponModulKey, _WeaponModul);
 
-            WeaponAttributes = GDEDataManager.GetCustomList(_key+"_"+WeaponAttributesKey, WeaponAttributes);
-         }
+            WeaponAttributes = GDEDataManager.GetCustomList(_key + "_" + WeaponAttributesKey, WeaponAttributes);
+        }
 
         public void Reset_Owned()
         {
@@ -206,17 +210,17 @@ namespace GameDataEditor
         }
 
         public void Reset_WeaponAttributes()
-		{
-			GDEDataManager.ResetToDefault(_key, WeaponAttributesKey);
+        {
+            GDEDataManager.ResetToDefault(_key, WeaponAttributesKey);
 
-			Dictionary<string, object> dict;
-			GDEDataManager.Get(_key, out dict);
+            Dictionary<string, object> dict;
+            GDEDataManager.Get(_key, out dict);
 
-			dict.TryGetCustomList(WeaponAttributesKey, out WeaponAttributes);
-			WeaponAttributes = GDEDataManager.GetCustomList(_key+"_"+WeaponAttributesKey, WeaponAttributes);
+            dict.TryGetCustomList(WeaponAttributesKey, out WeaponAttributes);
+            WeaponAttributes = GDEDataManager.GetCustomList(_key + "_" + WeaponAttributesKey, WeaponAttributes);
 
-			WeaponAttributes.ForEach(x => x.ResetAll());
-		}
+            WeaponAttributes.ForEach(x => x.ResetAll());
+        }
 
         public void ResetAll()
         {
@@ -234,5 +238,17 @@ namespace GameDataEditor
             GDEDataManager.Get(_key, out dict);
             LoadFromDict(_key, dict);
         }
+
+        #region Custom Method
+        public float GetAttributeCurrentVal(int id)
+        {
+            GDEWeaponAttributeData wad = WeaponAttributes.Find(p => { return p.Id == id; });
+            if (wad != null)
+            {
+                return wad.CurrentValue;
+            }
+            return 0;
+        }
+        #endregion
     }
 }

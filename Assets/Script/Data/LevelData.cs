@@ -5,10 +5,33 @@ public class LevelData : ScriptableObject
 {
     public int Id;
 
-    public int currentLevel = 0;
+    public int currentLevel
+    {
+        get
+        {
+            int level = 0;
+            for (int i = 0; i < objectives.Length; i++)
+            {
+                if (objectives[i] != null && objectives[i].IsFinished)
+                {
+                    level++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return level;
+        }
+        private set
+        {
 
-    public int randomLevel = 0;
+        }
+    }
 
+    int randomLevel = -1;
+
+    public int bossUnlockLevel = 7;
     public Objective[] objectives;
 
     public Objective bossObjectives;
@@ -20,14 +43,49 @@ public class LevelData : ScriptableObject
     public Vector3 bossLocalPosition;
     public Vector3 bossScale;
 
+    public string sceneName;
+
     public Objective GetCurrentObjective()
     {
-        if(currentLevel >=0 && currentLevel < objectives.Length)
+        int level = currentLevel;
+        if (level >= 0 && level < objectives.Length)
         {
-            return objectives[currentLevel];
+            return objectives[level];
         }
         return null;
     }
 
+    public void SetRandom(int r)
+    {
+        randomLevel = r;
+    }
+    public Objective GetRandomObjective()
+    {
+        if (randomLevel == -1)
+        {
+            randomLevel = Random.Range(0, currentLevel + 1);
+        }
 
+        return objectives[randomLevel];
+    }
+
+    public Objective GetBossObjective()
+    {
+        return bossObjectives;
+    }
+
+    public string GetCurrentLevelString()
+    {
+        return string.Format("{0}/{1}", currentLevel + 1,objectives.Length);
+    }
+
+    public bool IsMainCompleted()
+    {
+        return currentLevel == objectives.Length;
+    }
+
+    public bool IsBossCompleted()
+    {
+        return bossObjectives.IsFinished;
+    }
 }

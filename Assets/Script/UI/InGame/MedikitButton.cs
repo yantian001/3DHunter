@@ -23,17 +23,17 @@ public class MedikitButton : MonoBehaviour
     
     void OnButtonClick()
     {
-        if(Player.CurrentUser.Medikit > 0)
-        {
-            Player.CurrentUser.BuyGunAmmo(101, -1);
-            LeanTween.dispatchEvent((int)Events.USEMEDIKIT);
-            UpdateCountDisplay();
-        }
+        //if(Player.CurrentUser.Medikit > 0)
+        //{
+        //    Player.CurrentUser.BuyGunAmmo(101, -1);
+        //    LeanTween.dispatchEvent((int)Events.USEMEDIKIT);
+        //    UpdateCountDisplay();
+        //}
     }
 
     void UpdateCountDisplay()
     {
-        CommonUtils.SetChildText(theRect, "Count", Player.CurrentUser.Medikit.ToString());
+      //  CommonUtils.SetChildText(theRect, "Count", Player.CurrentUser.Medikit.ToString());
 
     }
 }

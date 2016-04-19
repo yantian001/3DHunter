@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,9 +8,26 @@ public class GameManager : MonoBehaviour
     bool enemyCleared = false;
     public GameStatu gameStatu = GameStatu.Init;
 
+    #region 单例模式
+    private static GameManager _instance;
+
+    public static GameManager Instance
+    {
+        private set
+        {
+            _instance = value;
+        }
+        get
+        {
+            return _instance;
+        }
+    }
+
+    #endregion
 
     public void Awake()
     {
+        _instance = this;
         //监听死亡
         LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
@@ -33,6 +48,7 @@ public class GameManager : MonoBehaviour
         LeanTween.removeListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
         LeanTween.removeListener((int)Events.GAMEPAUSE, OnPause);
         LeanTween.removeListener((int)Events.PREVIEWSTART, OnPreviewStart);
+        _instance = null;
     }
 
     void OnPause(LTEvent evt)
@@ -51,6 +67,26 @@ public class GameManager : MonoBehaviour
         LeanTween.removeListener((int)Events.GAMECONTINUE, OnContinue);
         ChangeGameStatu(GameStatu.InGame);
         Time.timeScale = 1;
+    }
+
+    public bool IsWillFinishGame(AS_Bullet bullet, AS_BulletHiter hiter)
+    {
+        if (!IsInGame())
+            return false;
+        if (!NearFinishTarget())
+            return false;
+        DamageManager dm = hiter.RootObject.GetComponent<DamageManager>();
+        Animal animal = hiter.RootObject.GetComponent<Animal>();
+        if (IsObjectiveTarget(animal, hiter.HitPos) && dm.hp - bullet.Damage <= 0)
+            return true;
+        return false;
+
+    }
+
+
+    public bool NearFinishTarget()
+    {
+        return targetKilled + 1 == GameValue.s_currentObjective.objectiveCount;
     }
 
     private void OnEnemyCleared(LTEvent obj)
@@ -80,10 +116,15 @@ public class GameManager : MonoBehaviour
     private void OnGameFinish(bool v)
     {
         //throw new NotImplementedException();
-        Debug.Log("Game Finish :" + v.ToString());
+        //Debug.Log("Game Finish :" + v.ToString());
         if (v)
         {
             GameValue.s_currentObjective.IsFinished = true;
+            if (GameValue.s_IsRandomObjective)
+            {
+                if (GameValue.s_LeveData)
+                    GameValue.s_LeveData.SetRandom(-1);
+            }
         }
         LeanTween.delayedCall(2f, () => { LeanTween.dispatchEvent((int)Events.GAMEFINISH, v); });
 
@@ -99,14 +140,40 @@ public class GameManager : MonoBehaviour
         gameStatu = statu;
         GameValue.staus = statu;
         Debug.Log("Game Statu : " + gameStatu.ToString());
-        //if (statu == GameStatu.Paused || statu == GameStatu.Failed || statu == GameStatu.Completed)
-        //{
-        //    BahaviorGlobalVariables.SetVariableValue("InGame", false);
-        //}
-        //else
-        //{
-        //    BahaviorGlobalVariables.SetVariableValue("InGame", true);
-        //}
+    }
+
+    public bool IsObjectiveTarget(Animal animal, HitPosition hitPos)
+    {
+        if (animal == null)
+            return false;
+        Animal target = GameValue.s_currentObjective.targetObjects.GetComponent<Animal>();
+        if (target.Id != animal.Id)
+        {
+            return false;
+        }
+        else
+        {
+            if (GameValue.s_currentObjective.objectiveType == ObjectiveType.COUNT)
+            {
+                return true;
+            }
+            else if (GameValue.s_currentObjective.objectiveType == ObjectiveType.HEADKILL)
+            {
+                if (hitPos == HitPosition.HEAD)
+                    return true;
+            }
+            else if (GameValue.s_currentObjective.objectiveType == ObjectiveType.HEARTKILL)
+            {
+                if (hitPos == HitPosition.HEART)
+                    return true;
+            }
+            else if (GameValue.s_currentObjective.objectiveType == ObjectiveType.LUNGKILL)
+            {
+                if (hitPos == HitPosition.LUNG)
+                    return true;
+            }
+        }
+        return false;
     }
 
     public void OnEnemyDie(LTEvent evt)

@@ -160,7 +160,7 @@ public class DamageManager : MonoBehaviour
         //Debug.Log(GUI.depth);
         GUI.depth = 3;
 
-        Debug.Log(GUI.depth);
+      //  Debug.Log(GUI.depth);
         if (isEnemy && showHitTips)
         {
             //Debug.Log(gameObject.name);

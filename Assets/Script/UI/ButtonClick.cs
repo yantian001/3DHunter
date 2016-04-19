@@ -19,7 +19,26 @@ public class ButtonClick : MonoBehaviour
         {
             btn.onClick.AddListener(OnButtonClick);
         }
+       
+       // StartCoroutine(CoroutineEffect());
     }
+
+
+    //IEnumerator CoroutineEffect()
+    //{
+    //    if (effectTexture)
+    //    {
+    //        while (true)
+    //        {
+    //            yield return new WaitForSeconds(effectInterv);
+    //            var effect = Instantiate(effectTexture);
+    //            //effect.GetComponent<RectTransform>().SetParent(transform.GetComponent<RectTransform>());
+    //          //  effect.GetComponent<ButtonLight>().StartEffect();
+    //        }
+    //    }
+
+    //}
+
 
     void OnButtonClick()
     {

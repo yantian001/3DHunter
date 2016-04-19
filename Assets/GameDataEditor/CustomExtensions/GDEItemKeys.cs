@@ -18,5 +18,6 @@ namespace GameDataEditor
         public static string WeaponAttribute_Gun0_Capacity = "Gun0_Capacity";
         public static string WeaponAttribute_Gun0_Infrared = "Gun0_Infrared";
         public static string Weapon_Gun0 = "Gun0";
+        public static string Weapon_Gun0_4c74319fd77f42c9b2133b6ca2cc33e7 = "Gun0_4c74319fd77f42c9b2133b6ca2cc33e7";
     }
 }

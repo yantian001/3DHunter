@@ -29,7 +29,7 @@ public class GunHanddle : MonoBehaviour
             }
         }
         //SwitchGun();
-      
+
     }
 
     private void OnPreviewStart(LTEvent obj)
@@ -114,20 +114,20 @@ public class GunHanddle : MonoBehaviour
     public void SwitchGun(int index)
     {
         //if (FPScamera.enabled)
-      //  {
-            for (int i = 0; i < Guns.Length; i++)
-            {
-                Hide(Guns[i].gameObject, false);
-                Guns[i].SetActive(false);
-            }
-            if (Guns.Length > 0 && index < Guns.Length && index >= 0)
-            {
-                GunIndex = index;
-                CurrentGun = Guns[GunIndex].gameObject.GetComponent<Gun>();
-                Hide(Guns[GunIndex].gameObject, true);
-                Guns[GunIndex].SetActive(true);
-            }
-    //    }
+        //  {
+        for (int i = 0; i < Guns.Length; i++)
+        {
+            Hide(Guns[i].gameObject, false);
+            Guns[i].SetActive(false);
+        }
+        if (Guns.Length > 0 && index < Guns.Length && index >= 0)
+        {
+            GunIndex = index;
+            CurrentGun = Guns[GunIndex].gameObject.GetComponent<Gun>();
+            Hide(Guns[GunIndex].gameObject, true);
+            Guns[GunIndex].SetActive(true);
+        }
+        //    }
     }
 
     public void SwitchGun()
@@ -138,11 +138,11 @@ public class GunHanddle : MonoBehaviour
         {
             if (index >= Guns.Length)
                 index = index - Guns.Length;
-            if (Player.CurrentUser.IsGunActived(Guns[index].id))
-            {
-                SwitchGun(index);
-                break;
-            }
+            //if (Player.CurrentUser.IsGunActived(Guns[index].id))
+            //{
+            SwitchGun(index);
+            break;
+            // }
             index++;
         }
     }

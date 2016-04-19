@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using BehaviorDesigner.Runtime;
+using System;
 
 public class Menu : MonoBehaviour
 {
@@ -10,14 +11,53 @@ public class Menu : MonoBehaviour
     RectTransform parent;
 
     public Transform boosTransform = null;
+
+    bool isLoopTask = false;
+
+    LevelData ld = null;
+
+    public void Awake()
+    {
+        LeanTween.addListener((int)Events.PLAYCLICKED, OnPlayClicked);
+    }
+
+    private void OnPlayClicked(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        if (currentObjective == null || currentScene == -1 || ld == null)
+            return;
+        GameValue.s_currentObjective = currentObjective;
+        GameValue.mapId = currentScene + 1;
+        GameValue.s_CurrentSceneName = ld.sceneName;
+        GameValue.s_IsRandomObjective = isLoopTask;
+        GameValue.s_LeveData = ld;
+        LeanTween.dispatchEvent((int)Events.GAMESTART);
+    }
+
+    public void OnDestroy()
+    {
+        LeanTween.removeListener((int)Events.PLAYCLICKED, OnPlayClicked);
+    }
+
+
+
     // Use this for initialization
     void Start()
     {
         parent = GetComponent<RectTransform>();
         //currentScene = Player.CurrentUser.LastPlayedScene;
         UpdateSceneDisplay(Player.CurrentUser.LastPlayedScene);
+
         if (currentObjective == null)
-            OnMainTaskSelected();
+        {
+            if (ld.IsMainCompleted())
+            {
+                CommonUtils.SetChildToggleOn(parent, "Middle/LoopTasks", true);
+            }
+            else
+                CommonUtils.SetChildToggleOn(parent, "Middle/MainTasks", true);
+        }
+        //OnMainTaskSelected();
     }
 
     void UpdateSceneDisplay(int scene)
@@ -32,13 +72,43 @@ public class Menu : MonoBehaviour
             if (scene >= len)
                 scene -= len;
         }
-        LevelData ld = ObjectiveManager.Instance.GetLevelData(scene);
+        ld = ObjectiveManager.Instance.GetLevelData(scene);
         if (ld == null)
             return;
         currentScene = scene;
 
         CommonUtils.SetChildRawImage(parent, "Middle/MainTasks/backImage", ld.mainTexture);
         CommonUtils.SetChildRawImage(parent, "Middle/LoopTasks/backImage", ld.loopTexture);
+        CommonUtils.SetChildText(parent, "Middle/MainTasks/Background/Count", ld.GetCurrentLevelString());
+
+        if (ld.IsMainCompleted())
+        {
+            CommonUtils.SetChildToggleInteractable(parent, "Middle/MainTasks", false);
+            if (ld.IsBossCompleted())
+            {
+                CommonUtils.SetChildToggleInteractable(parent, "Middle/Boss", false);
+
+            }
+            else
+            {
+                CommonUtils.SetChildToggleInteractable(parent, "Middle/Boss", true);
+
+            }
+        }
+        else
+        {
+            CommonUtils.SetChildToggleInteractable(parent, "Middle/MainTasks", true);
+            CommonUtils.SetChildToggleInteractable(parent, "Middle/Boss", false);
+
+        }
+
+        if (ld.currentLevel > 0)
+        {
+            CommonUtils.SetChildToggleInteractable(parent, "Middle/LoopTasks", true);
+        }
+        else
+            CommonUtils.SetChildToggleInteractable(parent, "Middle/LoopTasks", false);
+
         if (boosTransform)
         {
             boosTransform.DetachChildren();
@@ -49,22 +119,57 @@ public class Menu : MonoBehaviour
                 createObj.transform.SetParent(boosTransform);
                 // createObj.transform.localPosition = Vector3.zero;
                 createObj.AddComponent<AutoDestroyByRemove>();
-                if(ld.bossLocalPosition != Vector3.zero)
+                if (ld.bossLocalPosition != Vector3.zero)
                 {
                     createObj.transform.localPosition = ld.bossLocalPosition;
 
                 }
-                if(ld.bossScale != Vector3.zero)
+                if (ld.bossScale != Vector3.zero)
                 {
                     createObj.transform.localScale = ld.bossScale;
 
                 }
                 CommonUtils.SetChildComponentActive<BehaviorTree>(createObj.transform, false);
-               
-               // CommonUtils.SetChildComponentActive<Rigidbody>(createObj.transform, false);
+
+                // CommonUtils.SetChildComponentActive<Rigidbody>(createObj.transform, false);
             }
         }
-        OnMainTaskSelected();
+        currentObjective = null;
+    }
+
+
+    public void OnMainTaskToggled(bool b)
+    {
+        if (b)
+            OnMainTaskSelected();
+    }
+
+    public void OnLoopTaskToggled(bool b)
+    {
+        if (b)
+            OnLoopTaskSelected();
+    }
+
+    public void OnBossTaskToggled(bool b)
+    {
+        if (b)
+            onBossTaskSelected();
+    }
+
+    private void onBossTaskSelected()
+    {
+        // throw new NotImplementedException();
+        isLoopTask = false;
+        Objective obj = ObjectiveManager.Instance.GetBossObjective(currentScene);
+        Display(obj);
+    }
+
+    private void OnLoopTaskSelected()
+    {
+        isLoopTask = true;
+        Objective obj = ObjectiveManager.Instance.GetSceneLoopObjective(currentScene);
+        Display(obj);
+        //throw new NotImplementedException();
     }
 
     public void OnNextClicked()
@@ -80,6 +185,7 @@ public class Menu : MonoBehaviour
     public void OnMainTaskSelected()
     {
         Objective obj = ObjectiveManager.Instance.GetSceneCurrentObjective(currentScene);
+        isLoopTask = false;
         Display(obj);
 
     }
@@ -95,10 +201,10 @@ public class Menu : MonoBehaviour
         CommonUtils.SetChildText(parent, "Middle/Bg/RewardTitle/RewardText", string.Format("{0} ~ {1}", Mathf.CeilToInt(currentObjective.reward * 0.8f), Mathf.CeilToInt(currentObjective.reward * 1.5f)));
 
         int recommandCount = 0;
-        DisplayRecommand("Middle/Bg/Recommand/PowerItem", currentObjective.powerRequired != -1, false, ref recommandCount);
-        DisplayRecommand("Middle/Bg/Recommand/MaxZoom", currentObjective.maxZoomRequired != -1, false, ref recommandCount);
-        DisplayRecommand("Middle/Bg/Recommand/stability", currentObjective.stabilityRequired != -1, false, ref recommandCount);
-        DisplayRecommand("Middle/Bg/Recommand/capacity", currentObjective.capacityRequired != -1, false, ref recommandCount);
+        DisplayRecommand("Middle/Bg/Recommand/PowerItem", currentObjective.powerRequired != -1, WeaponManager.Instance.IsWeaponMeetReq(0, currentObjective.powerRequired), ref recommandCount);
+        DisplayRecommand("Middle/Bg/Recommand/MaxZoom", currentObjective.maxZoomRequired != -1, WeaponManager.Instance.IsWeaponMeetReq(1, currentObjective.maxZoomRequired), ref recommandCount);
+        DisplayRecommand("Middle/Bg/Recommand/stability", currentObjective.stabilityRequired != -1, WeaponManager.Instance.IsWeaponMeetReq(2, currentObjective.stabilityRequired), ref recommandCount);
+        DisplayRecommand("Middle/Bg/Recommand/capacity", currentObjective.capacityRequired != -1, WeaponManager.Instance.IsWeaponMeetReq(3, currentObjective.stabilityRequired), ref recommandCount);
     }
 
     public void DisplayRecommand(string name, bool show, bool isArrive, ref int displayCount)
@@ -110,9 +216,9 @@ public class Menu : MonoBehaviour
             if (powerRect)
             {
                 powerRect.anchoredPosition = new Vector2(displayCount * 40, 0);
+                CommonUtils.SetChildActive(powerRect, "WarningImage", !isArrive);
             }
             displayCount += 1;
-
         }
         else
         {

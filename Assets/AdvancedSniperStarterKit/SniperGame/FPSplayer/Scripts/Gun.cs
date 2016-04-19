@@ -78,7 +78,7 @@ public class Gun : MonoBehaviour
             fovTemp = NormalCamera.GetComponent<Camera>().fieldOfView;
         if (!this.InfinityAmmo)
         {
-            AmmoPack = Player.CurrentUser.GetMaterialCount(id);
+            //AmmoPack = Player.CurrentUser.GetMaterialCount(id);
         }
 
         if (AmmoIn > 1)
@@ -449,7 +449,7 @@ public class Gun : MonoBehaviour
                     cooldowntime = Time.time;
                     if (!InfinityAmmo)
                     {
-                        Player.CurrentUser.BuyGunAmmo(id, -1);
+                       // Player.CurrentUser.BuyGunAmmo(id, -1);
                     }
                     AmmoIn -= 1;
                     if (!SemiAuto)

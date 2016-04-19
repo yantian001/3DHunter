@@ -99,6 +99,7 @@ ModelImporter:
     7400016: UseStandingLoop [50]
     7400018: UseStandingStart [53]
     9500000: //RootNode
+    11100000: //RootNode
     13700000: stag
   materials:
     importMaterials: 1
@@ -119,7 +120,1087 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk [0]
+      takeName: Walk [0]
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Stand [2]
+      takeName: Stand [2]
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: CombatCritical [6]
+      takeName: CombatCritical [6]
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death [10]
+      takeName: Death [10]
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Stand [16]
+      takeName: Stand [16]
+      firstFrame: 0
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run [22]
+      takeName: Run [22]
+      firstFrame: 0
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Stand [47]
+      takeName: Stand [47]
+      firstFrame: 0
+      lastFrame: 459
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: UseStandingEnd [48]
+      takeName: UseStandingEnd [48]
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: UseStandingLoop [50]
+      takeName: UseStandingLoop [50]
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: UseStandingStart [53]
+      takeName: UseStandingStart [53]
+      firstFrame: 0
+      lastFrame: 51.2399979
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: stag
+        weight: 1
+      - path: stag 1
+        weight: 1
+      - path: stag 1/stag_bone_0
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_4/stag_bone_8/stag_bone_14/stag_bone_19/stag_bone_24/stag_bone_29/stag_bone_33
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_5/stag_bone_9
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_1/stag_bone_6/stag_bone_10/stag_bone_15/stag_bone_20/stag_bone_25/stag_bone_30/stag_bone_34
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_2
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_11/stag_bone_16/stag_bone_21/stag_bone_26/stag_bone_31/stag_bone_35
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_12/stag_bone_17/stag_bone_22/stag_bone_27/stag_bone_32/stag_bone_36
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_28
+        weight: 1
+      - path: stag 1/stag_bone_0/stag_bone_3/stag_bone_7/stag_bone_13/stag_bone_18/stag_bone_23/stag_bone_70
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -158,7 +1239,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

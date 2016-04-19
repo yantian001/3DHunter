@@ -6,6 +6,10 @@ public class GameValue
 
     public static string s_CurrentSceneName = "";
 
+    public static bool s_IsRandomObjective = false;
+
+    public static LevelData s_LeveData;
+
     public static int mapId = -1;
     /// <summary>
     /// current level

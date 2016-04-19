@@ -16,129 +16,150 @@ namespace GameDataEditor
     public class GDEWeaponAttributeData : IGDEData
     {
         private static string CanUpgradeKey = "CanUpgrade";
-		private bool _CanUpgrade;
+        private bool _CanUpgrade;
         public bool CanUpgrade
         {
             get { return _CanUpgrade; }
-            set {
+            set
+            {
                 if (_CanUpgrade != value)
                 {
                     _CanUpgrade = value;
-                    GDEDataManager.SetBool(_key+"_"+CanUpgradeKey, _CanUpgrade);
+                    GDEDataManager.SetBool(_key + "_" + CanUpgradeKey, _CanUpgrade);
                 }
             }
         }
 
         private static string IdKey = "Id";
-		private int _Id;
+        private int _Id;
         public int Id
         {
             get { return _Id; }
-            set {
+            set
+            {
                 if (_Id != value)
                 {
                     _Id = value;
-                    GDEDataManager.SetInt(_key+"_"+IdKey, _Id);
+                    GDEDataManager.SetInt(_key + "_" + IdKey, _Id);
                 }
             }
         }
 
         private static string CurrentLevelKey = "CurrentLevel";
-		private int _CurrentLevel;
+        private int _CurrentLevel;
         public int CurrentLevel
         {
             get { return _CurrentLevel; }
-            set {
+            set
+            {
                 if (_CurrentLevel != value)
                 {
                     _CurrentLevel = value;
-                    GDEDataManager.SetInt(_key+"_"+CurrentLevelKey, _CurrentLevel);
+                    GDEDataManager.SetInt(_key + "_" + CurrentLevelKey, _CurrentLevel);
                 }
             }
         }
 
         private static string InitialValueKey = "InitialValue";
-		private float _InitialValue;
+        private float _InitialValue;
         public float InitialValue
         {
             get { return _InitialValue; }
-            set {
+            set
+            {
                 if (_InitialValue != value)
                 {
                     _InitialValue = value;
-                    GDEDataManager.SetFloat(_key+"_"+InitialValueKey, _InitialValue);
+                    GDEDataManager.SetFloat(_key + "_" + InitialValueKey, _InitialValue);
                 }
             }
         }
 
         private static string CurrentValueKey = "CurrentValue";
-		private float _CurrentValue;
+        private float _CurrentValue;
         public float CurrentValue
         {
-            get { return _CurrentValue; }
-            set {
+            get
+            {
+                float ret = InitialValue;
+                if (_CurrentLevel > 0)
+                {
+                    if(LevelsInfo != null && LevelsInfo.Count > 0)
+                    {
+                        for(int i=0;i<_CurrentLevel && i< LevelsInfo.Count;i++)
+                        {
+                            ret += LevelsInfo[i].IncreaseValue;
+                        }
+                    }
+                }
+                return ret;
+            }
+            set
+            {
                 if (_CurrentValue != value)
                 {
                     _CurrentValue = value;
-                    GDEDataManager.SetFloat(_key+"_"+CurrentValueKey, _CurrentValue);
+                    GDEDataManager.SetFloat(_key + "_" + CurrentValueKey, _CurrentValue);
                 }
             }
         }
 
         private static string NameKey = "Name";
-		private string _Name;
+        private string _Name;
         public string Name
         {
             get { return _Name; }
-            set {
+            set
+            {
                 if (_Name != value)
                 {
                     _Name = value;
-                    GDEDataManager.SetString(_key+"_"+NameKey, _Name);
+                    GDEDataManager.SetString(_key + "_" + NameKey, _Name);
                 }
             }
         }
 
         private static string IconKey = "Icon";
-		private Texture2D _Icon;
+        private Texture2D _Icon;
         public Texture2D Icon
         {
             get { return _Icon; }
-            set {
+            set
+            {
                 if (_Icon != value)
                 {
                     _Icon = value;
-                    GDEDataManager.SetTexture2D(_key+"_"+IconKey, _Icon);
+                    GDEDataManager.SetTexture2D(_key + "_" + IconKey, _Icon);
                 }
             }
         }
 
         private static string LevelsInfoKey = "LevelsInfo";
-		public List<GDEWeaponLevelPropertyData>      LevelsInfo;
-		public void Set_LevelsInfo()
+        public List<GDEWeaponLevelPropertyData> LevelsInfo;
+        public void Set_LevelsInfo()
         {
-	        GDEDataManager.SetCustomList(_key+"_"+LevelsInfoKey, LevelsInfo);
-		}
-		
+            GDEDataManager.SetCustomList(_key + "_" + LevelsInfoKey, LevelsInfo);
+        }
+
 
         public GDEWeaponAttributeData()
-		{
-			_key = string.Empty;
-		}
+        {
+            _key = string.Empty;
+        }
 
-		public GDEWeaponAttributeData(string key)
-		{
-			_key = key;
-		}
-		
+        public GDEWeaponAttributeData(string key)
+        {
+            _key = key;
+        }
+
         public override void LoadFromDict(string dataKey, Dictionary<string, object> dict)
         {
             _key = dataKey;
 
-			if (dict == null)
-				LoadFromSavedData(dataKey);
-			else
-			{
+            if (dict == null)
+                LoadFromSavedData(dataKey);
+            else
+            {
                 dict.TryGetBool(CanUpgradeKey, out _CanUpgrade);
                 dict.TryGetInt(IdKey, out _Id);
                 dict.TryGetInt(CurrentLevelKey, out _CurrentLevel);
@@ -149,23 +170,23 @@ namespace GameDataEditor
 
                 dict.TryGetCustomList(LevelsInfoKey, out LevelsInfo);
                 LoadFromSavedData(dataKey);
-			}
-		}
+            }
+        }
 
         public override void LoadFromSavedData(string dataKey)
-		{
-			_key = dataKey;
-			
-            _CanUpgrade = GDEDataManager.GetBool(_key+"_"+CanUpgradeKey, _CanUpgrade);
-            _Id = GDEDataManager.GetInt(_key+"_"+IdKey, _Id);
-            _CurrentLevel = GDEDataManager.GetInt(_key+"_"+CurrentLevelKey, _CurrentLevel);
-            _InitialValue = GDEDataManager.GetFloat(_key+"_"+InitialValueKey, _InitialValue);
-            _CurrentValue = GDEDataManager.GetFloat(_key+"_"+CurrentValueKey, _CurrentValue);
-            _Name = GDEDataManager.GetString(_key+"_"+NameKey, _Name);
-            _Icon = GDEDataManager.GetTexture2D(_key+"_"+IconKey, _Icon);
+        {
+            _key = dataKey;
 
-            LevelsInfo = GDEDataManager.GetCustomList(_key+"_"+LevelsInfoKey, LevelsInfo);
-         }
+            _CanUpgrade = GDEDataManager.GetBool(_key + "_" + CanUpgradeKey, _CanUpgrade);
+            _Id = GDEDataManager.GetInt(_key + "_" + IdKey, _Id);
+            _CurrentLevel = GDEDataManager.GetInt(_key + "_" + CurrentLevelKey, _CurrentLevel);
+            _InitialValue = GDEDataManager.GetFloat(_key + "_" + InitialValueKey, _InitialValue);
+            _CurrentValue = GDEDataManager.GetFloat(_key + "_" + CurrentValueKey, _CurrentValue);
+            _Name = GDEDataManager.GetString(_key + "_" + NameKey, _Name);
+            _Icon = GDEDataManager.GetTexture2D(_key + "_" + IconKey, _Icon);
+
+            LevelsInfo = GDEDataManager.GetCustomList(_key + "_" + LevelsInfoKey, LevelsInfo);
+        }
 
         public void Reset_CanUpgrade()
         {
@@ -231,17 +252,17 @@ namespace GameDataEditor
         }
 
         public void Reset_LevelsInfo()
-		{
-			GDEDataManager.ResetToDefault(_key, LevelsInfoKey);
+        {
+            GDEDataManager.ResetToDefault(_key, LevelsInfoKey);
 
-			Dictionary<string, object> dict;
-			GDEDataManager.Get(_key, out dict);
+            Dictionary<string, object> dict;
+            GDEDataManager.Get(_key, out dict);
 
-			dict.TryGetCustomList(LevelsInfoKey, out LevelsInfo);
-			LevelsInfo = GDEDataManager.GetCustomList(_key+"_"+LevelsInfoKey, LevelsInfo);
+            dict.TryGetCustomList(LevelsInfoKey, out LevelsInfo);
+            LevelsInfo = GDEDataManager.GetCustomList(_key + "_" + LevelsInfoKey, LevelsInfo);
 
-			LevelsInfo.ForEach(x => x.ResetAll());
-		}
+            LevelsInfo.ForEach(x => x.ResetAll());
+        }
 
         public void ResetAll()
         {
