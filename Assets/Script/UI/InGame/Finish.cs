@@ -14,6 +14,7 @@ public class Finish : MonoBehaviour
 
     public Button btnReturn;
     public Button btnNext;
+    public Button btnRetry;
 
     // Use this for initialization
     void Start()
@@ -42,6 +43,10 @@ public class Finish : MonoBehaviour
         {
             btnNext = CommonUtils.GetChildComponent<Button>(rect, "Bottom/NextButton");
         }
+        if (btnRetry == null)
+        {
+            btnRetry = CommonUtils.GetChildComponent<Button>(rect, "Bottom/RetryButton");
+        }
 
         SetButtonInterable(false);
     }
@@ -56,6 +61,11 @@ public class Finish : MonoBehaviour
         if (btnNext)
         {
             btnNext.interactable = b;
+        }
+
+        if(btnRetry)
+        {
+            btnRetry.interactable = b;
         }
     }
 
@@ -72,9 +82,9 @@ public class Finish : MonoBehaviour
 
         float rewardRate = 1f + Random.Range(-0.2f, 0.5f);
         int reward = 0;
-        if(succed)
+        if (succed)
         {
-            reward= Mathf.CeilToInt(rewardRate * GameValue.s_currentObjective.reward);
+            reward = Mathf.CeilToInt(rewardRate * GameValue.s_currentObjective.reward);
         }
         else
         {
@@ -105,13 +115,20 @@ public class Finish : MonoBehaviour
         if (!succed)
         {
             title = "Hunting Failed";
+            CommonUtils.SetChildActive(rect, "Bottom/NextButton", false);
+            CommonUtils.SetChildActive(rect, "Bottom/RetryButton", true);
+        }
+        else
+        {
+            CommonUtils.SetChildActive(rect, "Bottom/NextButton", true);
+            CommonUtils.SetChildActive(rect, "Bottom/RetryButton", false);
         }
 
         CommonUtils.SetChildText(rect, "Middle/Bg/Title/Text", title);
 
         //add click handle
-
-        LeanTween.move(rect, Vector3.zero, .5f);
+        rect.anchoredPosition = Vector2.zero;
+        //LeanTween.move(rect, Vector3.zero, .5f);
         //CommonUtils.SetChildText(rect, "Middle/Bg/Target/Text")
     }
 
