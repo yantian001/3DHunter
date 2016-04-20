@@ -29,6 +29,9 @@ public class DamageManager : MonoBehaviour
     public int depth = 0;
 
     Animal animal;
+
+    float hpSliderDisplayBeginTime = 0;
+
     void Start()
     {
         if (behavior == null)
@@ -96,6 +99,7 @@ public class DamageManager : MonoBehaviour
         }
         distancedamage = distance;
         hp -= damage;
+        hpSliderDisplayBeginTime = Time.fixedTime;
         if (hp <= 0)
         {
             behavior.SetVariableValue("IsDead", true);
@@ -192,7 +196,7 @@ public class DamageManager : MonoBehaviour
 
         if (isEnemy && !isDied)
         {
-            if (hp < maxHp)
+            if (hp < maxHp && hpSliderDisplayBeginTime + 5 >= Time.fixedTime) 
             {
                 //默认NPC坐标点在脚底下，所以这里加上npcHeight它模型的高度即可
                 Vector3 worldPosition = new Vector3(transform.position.x, transform.position.y + hight, transform.position.z);
@@ -203,7 +207,7 @@ public class DamageManager : MonoBehaviour
 
                 Vector2 nameSize = GUI.skin.label.CalcSize(new GUIContent(animal.Name));
 
-                GUI.Label(new Rect(10, 50, nameSize.x, nameSize.y), animal.name);
+                GUI.Label(new Rect(10, 50, nameSize.x, nameSize.y), animal.Name);
 
                 Vector2 bloodSize = GUI.skin.horizontalSlider.CalcSize(new GUIContent(hpSlider));
                 Debug.Log(bloodSize);

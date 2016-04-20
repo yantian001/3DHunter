@@ -19,6 +19,9 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
         private Vector3 prevPosition;
 
+        private Vector3 selectExit;
+
+        bool exitSelected = false;
         public override void OnStart()
         {
             base.OnStart();
@@ -47,15 +50,18 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return targetPosition if targetTransform is null
         private Vector3 Target()
         {
-            if(!string.IsNullOrEmpty(exitTag.Value))
+            if(!string.IsNullOrEmpty(exitTag.Value) && !exitSelected)
             {
                 GameObject[] exits = GameObject.FindGameObjectsWithTag(exitTag.Value);
                 if(exits!= null && exits.Length > 0)
                 {
                     GameObject exit = exits[Random.Range(0, exits.Length)];
-                    return exit.transform.position;
+                    selectExit = exit.transform.position;
+                    exitSelected = true;
                 }
             }
+            if (exitSelected)
+                return selectExit;
             if (targetTransform.Value != null)
             {
                 return targetTransform.Value.position;
