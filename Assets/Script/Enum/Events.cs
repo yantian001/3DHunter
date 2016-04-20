@@ -49,4 +49,5 @@
     /// </summary>
     PREVIEWSTART,
     PLAYCLICKED,
+    FIRED,
 }

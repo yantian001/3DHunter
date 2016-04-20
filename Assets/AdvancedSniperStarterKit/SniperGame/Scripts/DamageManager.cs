@@ -36,7 +36,7 @@ public class DamageManager : MonoBehaviour
             behavior = GetComponent<BehaviorTree>();
         }
 
-        if(animal == null)
+        if (animal == null)
         {
             animal = GetComponent<Animal>();
         }
@@ -52,7 +52,7 @@ public class DamageManager : MonoBehaviour
             showHitTips = true;
             tipStartTime = Time.time;
         }
-        if(showHitTips)
+        if (showHitTips)
         {
             if (tipStartTime + tipsTime <= Time.time)
                 showHitTips = false;
@@ -154,13 +154,30 @@ public class DamageManager : MonoBehaviour
         edi.animal = this.GetComponent<Animal>();
         LeanTween.dispatchEvent((int)Events.ENEMYDIE, edi);
     }
+    /// <summary>
+    /// 是否受伤
+    /// </summary>
+    /// <returns></returns>
+    public bool IsInjured()
+    {
+        if (isDied)
+            return false;
+        if (hp < maxHp)
+            return true;
+        return false;
+    }
+
+    public bool IsDie()
+    {
+        return isDied;
+    }
 
     public void OnGUI()
     {
         //Debug.Log(GUI.depth);
         GUI.depth = 3;
 
-      //  Debug.Log(GUI.depth);
+        //  Debug.Log(GUI.depth);
         if (isEnemy && showHitTips)
         {
             //Debug.Log(gameObject.name);
@@ -170,12 +187,12 @@ public class DamageManager : MonoBehaviour
             GUI.color = Color.green;
             float hight = Screen.height - v3.y + (Time.time - tipStartTime) * tipsSpeed;
             GUI.Label(new Rect(v3.x, hight, textSize.x, textSize.y), name);
-           
+
         }
 
-        if(isEnemy && !isDied)
+        if (isEnemy && !isDied)
         {
-            if(hp < maxHp)
+            if (hp < maxHp)
             {
                 //默认NPC坐标点在脚底下，所以这里加上npcHeight它模型的高度即可
                 Vector3 worldPosition = new Vector3(transform.position.x, transform.position.y + hight, transform.position.z);
@@ -193,7 +210,7 @@ public class DamageManager : MonoBehaviour
                 //通过血值计算红色血条显示区域
                 int blood_width = hpSlider.width * hp / maxHp;
                 //先绘制黑色血条
-                GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, bloodSize.x, bloodSize.y ), hpSliderBg);
+                GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, bloodSize.x, bloodSize.y), hpSliderBg);
                 //在绘制红色血条
                 GUI.DrawTexture(new Rect(position.x - (bloodSize.x / 2), position.y - bloodSize.y, blood_width, bloodSize.y), hpSlider);
 

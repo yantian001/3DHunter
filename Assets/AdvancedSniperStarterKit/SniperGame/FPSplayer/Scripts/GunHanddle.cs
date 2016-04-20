@@ -156,6 +156,7 @@ public class GunHanddle : MonoBehaviour
             if (isFirstFire)
             {
                 BehaviorDesigner.Runtime.GlobalVariables.Instance.SetVariableValue("Fired", true);
+                LeanTween.dispatchEvent((int)Events.FIRED);
             }
         }
     }

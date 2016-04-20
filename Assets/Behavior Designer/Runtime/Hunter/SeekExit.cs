@@ -3,10 +3,10 @@ using UnityEngine;
 namespace BehaviorDesigner.Runtime.Tasks.Movement
 {
     [TaskDescription("Seek the target specified using the Unity NavMesh.")]
-    [TaskCategory("Movement")]
+    [TaskCategory("Hunter")]
     [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/Movement/documentation.php?id=3")]
     [TaskIcon("Assets/Behavior Designer Movement/Editor/Icons/{SkinColor}SeekIcon.png")]
-    public class Seek : NavMeshAgentMovement
+    public class SeekExit : NavMeshAgentMovement
     {
         [Tooltip("The agent has arrived when the magnitude is less than this value")]
         public SharedFloat arriveDistance = 0.1f;
@@ -14,6 +14,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         public SharedTransform targetTransform;
         [Tooltip("If target is null then use the target position")]
         public SharedVector3 targetPosition;
+
+        public SharedString exitTag;
 
         private Vector3 prevPosition;
 
@@ -45,6 +47,15 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return targetPosition if targetTransform is null
         private Vector3 Target()
         {
+            if(!string.IsNullOrEmpty(exitTag.Value))
+            {
+                GameObject[] exits = GameObject.FindGameObjectsWithTag(exitTag.Value);
+                if(exits!= null && exits.Length > 0)
+                {
+                    GameObject exit = exits[Random.Range(0, exits.Length)];
+                    return exit.transform.position;
+                }
+            }
             if (targetTransform.Value != null)
             {
                 return targetTransform.Value.position;
