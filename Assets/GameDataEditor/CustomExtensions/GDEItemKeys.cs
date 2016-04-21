@@ -13,10 +13,14 @@ namespace GameDataEditor
     public class GDEItemKeys
     {
         public static string WeaponAttribute_Gun0_Power = "Gun0_Power";
-        public static string WeaponAttribute_Gun0_MaxZoom = "Gun0_MaxZoom";
         public static string WeaponAttribute_Gun0_Stability = "Gun0_Stability";
-        public static string WeaponAttribute_Gun0_Capacity = "Gun0_Capacity";
         public static string WeaponAttribute_Gun0_Infrared = "Gun0_Infrared";
+        public static string WeaponAttribute_Gun0_MaxZoom = "Gun0_MaxZoom";
+        public static string WeaponAttribute_Gun0_Capacity = "Gun0_Capacity";
+        public static string WeaponLevelProperty_Gun0_Power_LevelProp = "Gun0_Power_LevelProp";
+        public static string WeaponLevelProperty_Gun0_Stability_LevelProp = "Gun0_Stability_LevelProp";
+        public static string WeaponLevelProperty_Gun0_Capacity_LevelProp = "Gun0_Capacity_LevelProp";
+        public static string WeaponLevelProperty_Gun0_MaxZoom_LevelProp = "Gun0_MaxZoom_LevelProp";
         public static string Weapon_Gun0 = "Gun0";
     }
 }
