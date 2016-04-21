@@ -40,5 +40,42 @@ public class ObjectiveManager : MonoBehaviour
         }
     }
 
-  
+    public Objective GetSceneCurrentObjective(int scene)
+    {
+        if(scene >= 0 && scene < levels.Length)
+        {
+            return levels[scene].GetCurrentObjective();
+        }
+        return null;
+    }
+
+    public Objective GetSceneLoopObjective(int scene)
+    {
+        if (scene >= 0 && scene < levels.Length)
+        {
+            return levels[scene].GetRandomObjective();
+        }
+        return null;
+    }
+
+    public Objective GetBossObjective(int scene)
+    {
+        LevelData ld = GetLevelData(scene);
+        if (ld != null)
+            return ld.GetBossObjective();
+        return null;
+    }
+
+    public LevelData GetLevelData(int scene)
+    {
+        if (scene >= 0 && scene < levels.Length)
+            return levels[scene];
+        else
+            return null;
+    }
+
+    public int GetLevelLength()
+    {
+        return levels.Length;
+    }
 }

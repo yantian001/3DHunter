@@ -20,9 +20,9 @@ public class Creator : MonoBehaviour
 
     public void Awake()
     {
-       // LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
+        // LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.ENEMYAWAY, OnEnemyDie);
-      
+
     }
 
     public void OnDestroy()
@@ -63,10 +63,30 @@ public class Creator : MonoBehaviour
                     tp = targets[j];
                 }
             }
-            Vector3 spawnPoint = CommonUtils.DetectGround(tp.transform.position + new Vector3(Random.Range(-(int)(tp.transform.localScale.x / 2.0f), (int)(tp.transform.localScale.x / 2.0f)), 0, Random.Range((int)(-tp.transform.localScale.z / 2.0f), (int)(tp.transform.localScale.z / 2.0f))));
-            GameObject.Instantiate(GameValue.s_currentObjective.targetObjects, spawnPoint, new Quaternion(0, Random.Range(0, 360f), 0, 0));
-            exsitCount += 1;
+            CreateObjAtWithHp(GameValue.s_currentObjective.targetObjects, tp, GameValue.s_currentObjective.targetHP);
         }
+        if (GameValue.s_currentObjective.otherObjects != null && GameValue.s_currentObjective.otherObjects.Length > 0)
+        {
+            for (int i = 0; i < GameValue.s_currentObjective.otherSpwanCount; i++)
+            {
+                TargetPosition tp = targets[Random.Range(0, targets.Length)];
+                CreateObjAtWithHp(GameValue.s_currentObjective.otherObjects[Random.Range(0, GameValue.s_currentObjective.otherObjects.Length)], tp, GameValue.s_currentObjective.targetHP);
+            }
+        }
+
     }
 
+    void CreateObjAtWithHp(GameObject o, TargetPosition tp, int hp)
+    {
+        if (!o)
+            return;
+        Vector3 spawnPoint = CommonUtils.DetectGround(tp.transform.position + new Vector3(Random.Range(-(int)(tp.transform.localScale.x / 2.0f), (int)(tp.transform.localScale.x / 2.0f)), 0, Random.Range((int)(-tp.transform.localScale.z / 2.0f), (int)(tp.transform.localScale.z / 2.0f))));
+        GameObject obj = (GameObject)GameObject.Instantiate(o, spawnPoint, new Quaternion(0, Random.Range(0, 360f), 0, 0));
+        DamageManager dm = obj.GetComponent<DamageManager>();
+        if (dm != null)
+        {
+            dm.hp = hp;
+        }
+        exsitCount += 1;
+    }
 }

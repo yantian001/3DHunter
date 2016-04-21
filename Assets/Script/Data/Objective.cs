@@ -47,7 +47,10 @@ public class Objective : ScriptableObject
     /// </summary>
     [Tooltip("任务奖励")]
     public float reward = 0;
-
+    /// <summary>
+    /// 任务惩罚
+    /// </summary>
+    [Tooltip("任务惩罚")]
     public float punish = 0;
 
     /// <summary>
@@ -119,6 +122,6 @@ public class Objective : ScriptableObject
             default:
                 break;
         }
-        return string.Format("Target:Kill {0} {1} {2}", objectiveCount, AnimalName, type);
+        return string.Format(" Kill {0} {1} {2}", objectiveCount, AnimalName, type);
     }
 }

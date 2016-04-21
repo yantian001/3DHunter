@@ -12,6 +12,22 @@ public class AnimalWarning : MonoBehaviour
 
     bool isNotified = false;
 
+    public void Awake()
+    {
+        LeanTween.addListener((int)Events.FIRED, OnFired);
+    }
+
+    public void OnDestroy()
+    {
+        LeanTween.removeListener((int)Events.FIRED, OnFired);
+
+    }
+
+    void OnFired(LTEvent evt)
+    {
+        currentTime = totalTime;
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -26,15 +42,15 @@ public class AnimalWarning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentTime <= totalTime)
+       
+        if (currentTime < totalTime)
         {
-            if(GameValue.staus == GameStatu.InGame)
+            if (GameValue.staus == GameStatu.InGame)
             {
                 currentTime += Time.deltaTime;
-                image.fillAmount = currentTime / totalTime;
                 isNotified = false;
             }
-           
+
         }
         else
         {
@@ -48,5 +64,6 @@ public class AnimalWarning : MonoBehaviour
                 }).setLoopType(LeanTweenType.pingPong);
             }
         }
+        image.fillAmount = currentTime / totalTime;
     }
 }

@@ -116,6 +116,29 @@ public class CommonUtils
 
     }
 
+    public static void SetChildToggleOn(RectTransform parent, string child, bool isOn)
+    {
+        if (parent == null || string.IsNullOrEmpty(child))
+            return;
+        var childNode = parent.FindChild(child);
+        if (childNode)
+        {
+            var toggle = childNode.GetComponent<Toggle>();
+            toggle.isOn = isOn;
+        }
+    }
+
+    public static void SetChildToggleInteractable(RectTransform parent, string child, bool interactable)
+    {
+        if (parent == null || string.IsNullOrEmpty(child))
+            return;
+        var childNode = parent.FindChild(child);
+        if (childNode)
+        {
+            var toggle = childNode.GetComponent<Toggle>();
+            toggle.interactable = interactable;
+        }
+    }
     /// <summary>
     /// 拷贝UI对象的位置，以及父对象
     /// </summary>
@@ -190,6 +213,18 @@ public class CommonUtils
         return ret;
     }
 
+    public static void SetChildComponentActive<T>(Transform t, bool b)
+    {
+        T[] ts = t.GetComponents<T>();
+        if (ts != null)
+        {
+            for (int i = 0; i < ts.Length; i++)
+            {
+                (ts[i] as MonoBehaviour).enabled = b;
+            }
+        }
+    }
+
     /// <summary>
     /// 检测地面
     /// </summary>
@@ -204,4 +239,6 @@ public class CommonUtils
         }
         return position;
     }
+
+
 }

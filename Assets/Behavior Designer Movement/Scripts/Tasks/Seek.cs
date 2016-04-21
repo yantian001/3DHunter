@@ -28,11 +28,13 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return running if the agent hasn't reached the destination yet
         public override TaskStatus OnUpdate()
         {
-            if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < arriveDistance.Value) {
+            if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < arriveDistance.Value)
+            {
                 return TaskStatus.Success;
             }
 
-            if (prevPosition != Target()) {
+            if (prevPosition != Target())
+            {
                 prevPosition = Target();
                 navMeshAgent.destination = prevPosition;
             }
@@ -43,7 +45,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return targetPosition if targetTransform is null
         private Vector3 Target()
         {
-                if (targetTransform.Value != null) {
+            if (targetTransform.Value != null)
+            {
                 return targetTransform.Value.position;
             }
             return targetPosition.Value;

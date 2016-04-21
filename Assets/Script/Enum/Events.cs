@@ -48,4 +48,6 @@
     /// 游戏预览转到开始
     /// </summary>
     PREVIEWSTART,
+    PLAYCLICKED,
+    FIRED,
 }

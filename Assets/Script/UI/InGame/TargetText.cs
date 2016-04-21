@@ -4,6 +4,8 @@ public class TargetText : MonoBehaviour
 {
 
     public Text text;
+
+    public bool needAppendTarget = false;
     // Use this for initialization
     void Start()
     {
@@ -11,9 +13,16 @@ public class TargetText : MonoBehaviour
         {
             text = GetComponent<Text>();
         }
+        string strText = "";
+
         if (text)
         {
-            text.text = GameValue.s_currentObjective.GetObjString();
+            if(needAppendTarget)
+            {
+                strText = "Target: ";
+            }
+            strText += GameValue.s_currentObjective.GetObjString();
+            text.text = strText;
         }
     }
 
