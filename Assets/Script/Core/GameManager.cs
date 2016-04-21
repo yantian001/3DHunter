@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         LeanTween.addListener((int)Events.GAMEPAUSE, OnPause);
         LeanTween.addListener((int)Events.PREVIEWSTART, OnPreviewStart);
         Time.timeScale = 1;
+        BehaviorDesigner.Runtime.GlobalVariables.Instance.SetVariableValue("Fired", false);
     }
 
     private void OnPreviewStart(LTEvent obj)

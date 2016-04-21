@@ -124,6 +124,15 @@ public class Finish : MonoBehaviour
             CommonUtils.SetChildActive(rect, "Bottom/RetryButton", false);
         }
 
+        //add 3d object
+        //RectTransform holder = CommonUtils.GetChildComponent<RectTransform>(rect, "Middle/AnimalHolder");
+        //var objTarget = GameObject.Instantiate<GameObject>(GameValue.s_currentObjective.targetObjects);
+        //var rtTarget = objTarget.AddComponent<RectTransform>();
+        //rtTarget.pivot = new Vector2(1, 0.5f);
+        //Destroy(objTarget.GetComponent<NavMeshAgent>());
+        //Destroy(objTarget.GetComponent<BehaviorDesigner.Runtime.BehaviorTree>());
+        //rtTarget.SetParent(holder);
+        
         CommonUtils.SetChildText(rect, "Middle/Bg/Title/Text", title);
 
         //add click handle
