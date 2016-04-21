@@ -53,11 +53,11 @@ public class Shop : MonoBehaviour {
 
 		weapons = new GameObject[3];
 
-		weapons[0] = this.gameObject.GetComponent<Transform>().Find("Q-0").gameObject;
+		weapons[0] = GameObject.Find("Q-0").gameObject;
 
-		weapons[1] = this.gameObject.GetComponent<Transform>().Find("Q-1").gameObject;
+		weapons[1] = GameObject.Find("Q-1").gameObject;
 
-		weapons[2] = this.gameObject.GetComponent<Transform>().Find("Q-2").gameObject;
+		weapons[2] = GameObject.Find("Q-2").gameObject;
 
 		 
 
@@ -193,7 +193,7 @@ public class Shop : MonoBehaviour {
 	{
 	
 		//设置枪的名字
-		CommonUtils.SetChildText(rect,"middle/task/guntitle/name",weapon.Name);
+		CommonUtils.SetChildText(rect,"middle/guntitle/name",weapon.Name);
 
 		//设置power
 
@@ -207,8 +207,6 @@ public class Shop : MonoBehaviour {
 			CommonUtils.GetChildComponent<Text>(rect,"middle/task/attr1/currentvalue").color = Color.green;
 			selected.transform.position = PowerBtn.transform.position;
 			CommonUtils.GetChildComponent<Text>(rect,"middle/task/attr1/currentvalue").fontSize = 18;
-
-
 
 		}
 		else
@@ -270,7 +268,6 @@ public class Shop : MonoBehaviour {
 		//设置 Capacity	
 
 		capacityAttr =  weapon.WeaponAttributes[4];
-
 		CommonUtils.GetChildComponent<Text>(rect,"middle/task/attr5/currentvalue").color = Color.white;
 
 		if(currentAttr == 4)
@@ -285,9 +282,6 @@ public class Shop : MonoBehaviour {
 			CommonUtils.SetChildText(rect,"middle/task/attr5/currentvalue",capacityAttr.CurrentValue.ToString());
 			CommonUtils.GetChildComponent<Text>(rect,"middle/task/attr5/currentvalue").fontSize = 24;
 		}
-
-
-
 		costTxt.text =  weapon.WeaponAttributes[currentAttr].LevelsInfo[0].Cost.ToString();
 
 	}
@@ -397,8 +391,5 @@ public class Shop : MonoBehaviour {
 		updateBuyBtn();
 	}
 
-	// Update is called once per frame
-	void Update () {
 	
-	}
 }
