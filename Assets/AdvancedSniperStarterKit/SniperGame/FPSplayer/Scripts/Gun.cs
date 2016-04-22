@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using GameDataEditor;
 
 [RequireComponent(typeof(AudioSource))]
 
@@ -32,6 +32,7 @@ public class Gun : MonoBehaviour
     public float MouseStability = 20.5f;
     public bool Zooming;
     public bool ZoomingBeforeReload;
+    float Power = 0;
     public float MaxZoom = 6.0f;
     public float Infrared = 8f;
     public bool SemiAuto;
@@ -90,6 +91,15 @@ public class Gun : MonoBehaviour
         rotationTemp = this.transform.localRotation;
         this.transform.localPosition = positionTemp - (Vector3.up);
 
+        GDEWeaponData wd = WeaponManager.Instance.GetWeaponById(id);
+        if (wd != null)
+        {
+            Power = wd.GetAttributeCurrentVal(0);
+            MaxZoom = wd.GetAttributeCurrentVal(1);
+            MouseStability = wd.GetAttributeCurrentVal(2);
+            ClipSize = ConvertUtil.ToInt32(wd.GetAttributeCurrentVal(3));
+            Infrared = wd.GetAttributeCurrentVal(5);
+        }
     }
 
     public void SetActive(bool active)
@@ -438,6 +448,11 @@ public class Gun : MonoBehaviour
                         {
                             Vector3 point = NormalCamera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
                             GameObject bullet = (GameObject)Instantiate(Bullets, point, NormalCamera.gameObject.transform.rotation);
+                            var asBuulet = bullet.GetComponent<AS_Bullet>();
+                            if (asBuulet)
+                            {
+                                asBuulet.Damage = ConvertUtil.ToInt32(Power);
+                            }
                             bullet.transform.forward = NormalCamera.transform.forward + (new Vector3(Random.Range(-Spread, Spread) + Offset.x, Random.Range(-Spread, Spread) + Offset.y, Random.Range(-Spread, Spread)) * 0.001f);
                             Destroy(bullet, LifeTimeBullet);
                         }
@@ -449,7 +464,7 @@ public class Gun : MonoBehaviour
                     cooldowntime = Time.time;
                     if (!InfinityAmmo)
                     {
-                       // Player.CurrentUser.BuyGunAmmo(id, -1);
+                        // Player.CurrentUser.BuyGunAmmo(id, -1);
                     }
                     AmmoIn -= 1;
                     if (!SemiAuto)

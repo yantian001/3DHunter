@@ -249,6 +249,15 @@ namespace GameDataEditor
             }
             return 0;
         }
+
+        public GDEWeaponAttributeData GetAttributeById(int id)
+        {
+            if(WeaponAttributes != null)
+            {
+                return WeaponAttributes.Find(p => { return p.Id == id; });
+            }
+            return null;
+        }
         #endregion
     }
 }

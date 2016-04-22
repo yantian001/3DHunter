@@ -132,18 +132,28 @@ public class GunHanddle : MonoBehaviour
 
     public void SwitchGun()
     {
-        //  int count = 0;
-        int index = GunIndex + 1;
-        while (true)
+       
+        int currentId = WeaponManager.Instance.GetCurrentWeaponId();
+        if(currentId == -1)
         {
-            if (index >= Guns.Length)
-                index = index - Guns.Length;
-            //if (Player.CurrentUser.IsGunActived(Guns[index].id))
-            //{
-            SwitchGun(index);
-            break;
-            // }
-            index++;
+            SwitchGun(0);
+
+        }
+        else
+        {
+            int select = -1;
+            for(int i= 0;i<Guns.Length;i++)
+            {
+                if (Guns[i].id == currentId)
+                {
+                    select = i;
+                    break;
+                }
+            }
+            if (select == -1)
+                SwitchGun(0);
+            else
+                SwitchGun(select);
         }
     }
 

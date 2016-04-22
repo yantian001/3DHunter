@@ -42,7 +42,7 @@ public class WeaponManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             _instance = this;
             Init();
-            BuyWeapon(0);
+            //BuyWeapon(0);
         }
         else
         {
@@ -145,5 +145,31 @@ public class WeaponManager : MonoBehaviour
         }
         return currentWeapon.GetAttributeCurrentVal(attrid) >= val;
     }
+
     #endregion
+
+    /// <summary>
+    /// 获取当前武器ID
+    /// </summary>
+    /// <returns></returns>
+    public int GetCurrentWeaponId()
+    {
+        if (currentWeapon != null)
+        {
+            return currentWeapon.Id;
+        }
+        else
+            return -1;
+    }
+
+    /// <summary>
+    /// 通过ID 获取武器
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public GDEWeaponData GetWeaponById(int id)
+    {
+        GDEWeaponData wd = weapons.Find(p => { return p.Id == id; });
+        return wd;
+    }
 }

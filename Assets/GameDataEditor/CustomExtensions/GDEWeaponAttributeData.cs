@@ -281,5 +281,32 @@ namespace GameDataEditor
             GDEDataManager.Get(_key, out dict);
             LoadFromDict(_key, dict);
         }
+
+        #region
+        /// <summary>
+        /// 获取当前升级花费
+        /// </summary>
+        /// <returns></returns>
+        public int GetUpgradeCost()
+        {
+            if(IsMaxLevel())
+            {
+                return -1;
+            }
+            else
+            {
+                return LevelsInfo[CurrentLevel].Cost;
+            }
+        }
+
+        /// <summary>
+        /// 是否已经满级
+        /// </summary>
+        /// <returns></returns>
+        public bool IsMaxLevel()
+        {
+            return CurrentLevel >= LevelsInfo.Count;
+        }
+        #endregion
     }
 }
