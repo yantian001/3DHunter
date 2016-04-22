@@ -109,6 +109,7 @@ public class PreviewCamera : MonoBehaviour
         if (cameraPreview)
         {
             cam.enabled = true;
+            cam.GetComponent<AudioListener>().enabled = true;
             cam.transform.LookAt(lookedObject.transform);
 
         }

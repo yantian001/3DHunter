@@ -98,7 +98,7 @@ public class Gun : MonoBehaviour
             MaxZoom = wd.GetAttributeCurrentVal(1);
             MouseStability = wd.GetAttributeCurrentVal(2);
             ClipSize = ConvertUtil.ToInt32(wd.GetAttributeCurrentVal(3));
-            Infrared = wd.GetAttributeCurrentVal(5);
+            Infrared = wd.GetAttributeCurrentVal(4);
         }
     }
 
