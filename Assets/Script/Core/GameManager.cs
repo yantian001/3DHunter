@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     bool enemyCleared = false;
     public GameStatu gameStatu = GameStatu.Init;
 
+    public AudioClip successAC;
+
+    public AudioClip failAC;
+
     #region 单例模式
     private static GameManager _instance;
 
@@ -120,6 +124,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Game Finish :" + v.ToString());
         if (v)
         {
+
             GameValue.s_currentObjective.IsFinished = true;
             if (GameValue.s_IsRandomObjective)
             {
@@ -127,7 +132,22 @@ public class GameManager : MonoBehaviour
                     GameValue.s_LeveData.SetRandom(-1);
             }
         }
-        LeanTween.delayedCall(2f, () => { LeanTween.dispatchEvent((int)Events.GAMEFINISH, v); });
+        LeanTween.delayedCall(2f, () =>
+        {
+            if (v)
+            {
+                if (successAC)
+                    LeanAudio.play(successAC);
+            }
+            else
+            {
+                if (failAC)
+                {
+                    LeanAudio.play(failAC);
+                }
+            }
+            LeanTween.dispatchEvent((int)Events.GAMEFINISH, v);
+        });
 
     }
 

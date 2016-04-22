@@ -189,7 +189,7 @@ public class DamageManager : MonoBehaviour
             string name = hpos.ToString() + " SHOT";
             Vector2 textSize = GUI.skin.label.CalcSize(new GUIContent(name));
             GUI.color = Color.green;
-            float hight = Screen.height - v3.y + (Time.time - tipStartTime) * tipsSpeed;
+            float hight = Screen.height - v3.y - (Time.time - tipStartTime) * tipsSpeed;
             GUI.Label(new Rect(v3.x, hight, textSize.x, textSize.y), name);
 
         }

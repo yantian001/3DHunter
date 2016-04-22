@@ -12,6 +12,7 @@ public class GameLogic : MonoBehaviour
     public string s_LoadingScene = "Loading";
     public string s_MenuScene = "Menu";
     public string s_StartScene = "Start";
+    public string s_ShopScene = "Shop";
     public string s_iOSId = "1041667864";
 
     private static GameLogic _logic = null;
@@ -48,11 +49,18 @@ public class GameLogic : MonoBehaviour
             LeanTween.addListener((int)Events.GAMEQUIT, OnGameQuit);
             LeanTween.addListener((int)Events.GAMEMORE, OnGameMore);
             LeanTween.addListener((int)Events.GAMERATE, OnGameRate);
+            LeanTween.addListener((int)Events.SHOP, OnShop);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnShop(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        Application.LoadLevel(s_ShopScene);
     }
 
     private void OnGameRate(LTEvent obj)
