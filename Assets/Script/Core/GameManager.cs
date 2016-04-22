@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
     {
         gameStatu = statu;
         GameValue.staus = statu;
-        Debug.Log("Game Statu : " + gameStatu.ToString());
+       // Debug.Log("Game Statu : " + gameStatu.ToString());
     }
 
     public bool IsObjectiveTarget(Animal animal, HitPosition hitPos)

@@ -2,12 +2,12 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-struct casthit
+class casthit
 {
     public int index;
     public float distance;
     public string name;
-    public int sort;
+    public int sort = -1;
 }
 
 [RequireComponent(typeof(Rigidbody))]

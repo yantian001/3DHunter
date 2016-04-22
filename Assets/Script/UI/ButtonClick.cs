@@ -50,7 +50,7 @@ public class ButtonClick : MonoBehaviour
         {
             LeanAudio.play(clickClip);
         }
-        Debug.Log("button Clicked");
+      //  Debug.Log("button Clicked");
     }
 
     public void OnDisable()
