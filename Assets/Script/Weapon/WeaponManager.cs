@@ -37,6 +37,7 @@ public class WeaponManager : MonoBehaviour
     #region Monobehavior
     void Awake()
     {
+
         if (_instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -60,6 +61,7 @@ public class WeaponManager : MonoBehaviour
         if (GDEDataManager.Init("gde_data"))
         {
             List<string> wsKeys;
+            
             GDEDataManager.GetAllDataKeysBySchema("Weapon", out wsKeys);
 
             for (int i = 0; i < wsKeys.Count; i++)
@@ -69,6 +71,7 @@ public class WeaponManager : MonoBehaviour
 
                 if (wd != null)
                 {
+                   // wd.ResetAll();
                     weapons.Add(wd);
                     if (wd.Equipped)
                         currentWeapon = wd;

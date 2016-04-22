@@ -104,6 +104,23 @@ namespace GameDataEditor
             }
         }
 
+        public float MaxValue
+        {
+            get
+            {
+                float ret = InitialValue;
+                if(CanUpgrade && LevelsInfo != null)
+                {
+                    for(int i=0;i<LevelsInfo.Count;i++)
+                    {
+                        ret += LevelsInfo[i].IncreaseValue;
+                    }
+                }
+                return ret;
+            }
+            
+        }
+
         private static string NameKey = "Name";
         private string _Name;
         public string Name

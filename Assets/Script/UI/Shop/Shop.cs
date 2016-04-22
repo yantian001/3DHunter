@@ -175,7 +175,7 @@ public class Shop : MonoBehaviour
         if (!weapon.Owned)
         {
             upgradeBtn.gameObject.SetActive(false);
-            costTxt.gameObject.SetActive(true);
+            costTxt.transform.parent.gameObject.SetActive(true);
             costTxt.text = weapon.Price.ToString();
             Text t = BuyBtn.transform.FindChild("Text").GetComponent<Text>();
             t.text = "Buy";
@@ -188,15 +188,18 @@ public class Shop : MonoBehaviour
             t.text = "Equipment";
             // BuyBtn.interactable = true;
             BuyBtn.gameObject.SetActive(true);
+            costTxt.transform.parent.gameObject.SetActive(false);
+            upgradeBtn.gameObject.SetActive(false);
         }
-
         else if (weapon.Equipped)
         {
             BuyBtn = CommonUtils.GetChildComponent<Button>(rect, "middle/task/BuyBtn");
-
             Text t = BuyBtn.transform.FindChild("Text").GetComponent<Text>();
             t.text = "Equipment";
             BuyBtn.gameObject.SetActive(false);
+            //costTxt.transform.parent.gameObject.SetActive(false);
+            costTxt.transform.parent.gameObject.SetActive(false);
+            upgradeBtn.gameObject.SetActive(false);
         }
     }
 
@@ -211,7 +214,7 @@ public class Shop : MonoBehaviour
         powerAttr = weapon.GetAttributeById(0);
 
         CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").color = Color.white;
-
+        CommonUtils.SetChildText(rect, "middle/task/attr1/maxValue", string.Format("({0})", powerAttr.MaxValue.ToString()));
         if (currentAttr == 0)
         {
             CommonUtils.SetChildText(rect, "middle/task/attr1/currentvalue", powerAttr.CurrentValue.ToString() + "+" + powerAttr.LevelsInfo[0].IncreaseValue);
@@ -307,12 +310,12 @@ public class Shop : MonoBehaviour
                 if (currentAttrdata.IsMaxLevel())
                 {
                     upgradeBtn.gameObject.SetActive(false);
-                    costTxt.gameObject.SetActive(false);
+                    costTxt.transform.parent.gameObject.SetActive(false);
                 }
                 else
                 {
                     upgradeBtn.gameObject.SetActive(true);
-                    costTxt.gameObject.SetActive(true);
+                    costTxt.transform.parent.gameObject.SetActive(true);
                     costTxt.text = currentAttrdata.GetUpgradeCost().ToString();
                 }
             }

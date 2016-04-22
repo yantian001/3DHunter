@@ -68,7 +68,7 @@ public class CameraRound : MonoBehaviour
             }
             // transform.RotateAround(Vector3.up, Time.deltaTime * 3f);
             transform.RotateAround(transform.position + new Vector3(0, 0, 20), Vector3.up, Time.deltaTime * speed);
-            Debug.Log(transform.rotation.eulerAngles.y);
+            //Debug.Log(transform.rotation.eulerAngles.y);
         }
 
     }
