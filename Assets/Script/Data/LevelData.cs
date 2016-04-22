@@ -29,7 +29,7 @@ public class LevelData : ScriptableObject
         }
     }
 
-    int randomLevel = -1;
+    public int randomLevel = -1;
 
     public int bossUnlockLevel = 7;
     public Objective[] objectives;
@@ -63,7 +63,7 @@ public class LevelData : ScriptableObject
     {
         if (randomLevel == -1)
         {
-            randomLevel = Random.Range(0, currentLevel + 1);
+            randomLevel = Random.Range(0, currentLevel);
         }
 
         return objectives[randomLevel];
@@ -76,7 +76,7 @@ public class LevelData : ScriptableObject
 
     public string GetCurrentLevelString()
     {
-        return string.Format("{0}/{1}", currentLevel + 1,objectives.Length);
+        return string.Format("{0}/{1}", currentLevel + 1, objectives.Length);
     }
 
     public bool IsMainCompleted()
@@ -86,6 +86,8 @@ public class LevelData : ScriptableObject
 
     public bool IsBossCompleted()
     {
+        if (bossObjectives == null)
+            return false;
         return bossObjectives.IsFinished;
     }
 }
