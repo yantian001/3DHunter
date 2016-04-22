@@ -48,6 +48,14 @@ public class Menu : MonoBehaviour
         //currentScene = Player.CurrentUser.LastPlayedScene;
         UpdateSceneDisplay(Player.CurrentUser.LastPlayedScene);
 
+        //OnMainTaskSelected();
+    }
+
+    void DefaultSelect()
+    {
+        CommonUtils.SetChildToggleOn(parent, "Middle/LoopTasks", false);
+        CommonUtils.SetChildToggleOn(parent, "Middle/MainTasks", false);
+        CommonUtils.SetChildToggleOn(parent, "Middle/Boss", false);
         if (currentObjective == null)
         {
             if (ld.IsMainCompleted())
@@ -57,7 +65,6 @@ public class Menu : MonoBehaviour
             else
                 CommonUtils.SetChildToggleOn(parent, "Middle/MainTasks", true);
         }
-        //OnMainTaskSelected();
     }
 
     void UpdateSceneDisplay(int scene)
@@ -135,6 +142,8 @@ public class Menu : MonoBehaviour
             }
         }
         currentObjective = null;
+
+        DefaultSelect();
     }
 
 

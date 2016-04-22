@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using ChartboostSDK;
+using System;
+
 public class ChartboostUtil : MonoBehaviour
 {
 
     static ChartboostUtil _instance = null;
+
+    
 
     public static ChartboostUtil Instance
     {
@@ -34,11 +38,39 @@ public class ChartboostUtil : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+            LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+            LeanTween.addListener((int)Events.GAMEPAUSE, OnGamePause);
+            LeanTween.addListener((int)Events.MENULOADED, OnGameMenu);
+            LeanTween.addListener((int)Events.GAMEMORE, OnGameMore);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnGameMore(LTEvent obj)
+    {
+        //  throw new NotImplementedException();
+        this.ShowMoreAppOnDefault();
+    }
+
+    private void OnGameMenu(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        this.ShowInterstitialOnHomescreen();
+    }
+
+    private void OnGamePause(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        this.ShowInterstitialOnDefault();
+    }
+
+    private void OnGameFinish(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        this.ShowInterstitialOnDefault();
     }
 
     // Use this for initialization

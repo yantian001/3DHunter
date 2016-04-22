@@ -35,7 +35,7 @@ public class PreviewCamera : MonoBehaviour
         int objId = GameValue.s_currentObjective.GetAnimalId();
         for (int i = 0; i < animals.Length; i++)
         {
-            if (animals[i].Id == objId)
+            if (animals[i].Id == objId && animals[i].isTarget)
             {
                 lookedObject = animals[i].gameObject;
                 break;

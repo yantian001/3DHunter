@@ -61,7 +61,7 @@ public class Gun : MonoBehaviour
     [HideInInspector]
     public FPSController FPSmotor;
     [HideInInspector]
-    public float CurrentZoom = 2f;
+    public float CurrentZoom = 1f;
 
     void Start()
     {

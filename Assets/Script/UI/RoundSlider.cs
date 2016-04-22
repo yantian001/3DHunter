@@ -45,7 +45,7 @@ public class RoundSlider : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (gunHanddle == null)
         {
             gunHanddle = FindObjectOfType<GunHanddle>();
-            maxTime = gunHanddle.CurrentGun.MaxZoom - 2;
+            maxTime = gunHanddle.CurrentGun.MaxZoom - 1;
             aimTime = gunHanddle.CurrentGun.CurrentZoom;
             text.text = string.Format("{0:##0.0} X", aimTime);
         }
