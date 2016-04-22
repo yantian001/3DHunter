@@ -139,7 +139,7 @@ public class DamageManager : MonoBehaviour
                 this.gameObject.SetActive(false);
 
             }
-            AfterDead(suffix, hitPos);
+            AfterDead(suffix);
         }
         else
         {
@@ -147,14 +147,14 @@ public class DamageManager : MonoBehaviour
         }
     }
 
-    public void AfterDead(int suffix, HitPosition pos = HitPosition.NONE)
+    public void AfterDead(int suffix)
     {
 
         EnemyDeadInfo edi = new EnemyDeadInfo();
         edi.score = Score;
         edi.transform = this.transform;
         edi.headShot = suffix == 2;
-        edi.hitPos = pos;
+        edi.hitPos = hpos;
         edi.animal = this.GetComponent<Animal>();
         LeanTween.dispatchEvent((int)Events.ENEMYDIE, edi);
     }

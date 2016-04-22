@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
     public void OnEnable()
     {
         LeanTween.addListener((int)Events.MONEYUSED, OnMoneyUsed);
-       
+        
     }
 
     private void OnGameFinish(LTEvent obj)

@@ -78,7 +78,13 @@ public class Shop : MonoBehaviour
 
 
         //Debug.Log(value);
-
+        while (value < 0 || value >= MaxGun)
+        {
+            if (value < 0)
+                value += MaxGun;
+            if (value >= MaxGun)
+                value -= MaxGun;
+        }
         currentAttr = -1;
         getWeapon(value);
         readGunData();
@@ -215,18 +221,18 @@ public class Shop : MonoBehaviour
 
         CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").color = Color.white;
         CommonUtils.SetChildText(rect, "middle/task/attr1/maxValue", string.Format("({0})", powerAttr.MaxValue.ToString()));
-        if (currentAttr == 0)
+        if (currentAttr == 0 && !powerAttr.IsMaxLevel())
         {
             CommonUtils.SetChildText(rect, "middle/task/attr1/currentvalue", powerAttr.CurrentValue.ToString() + "+" + powerAttr.LevelsInfo[0].IncreaseValue);
             CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").color = Color.green;
-            selected.transform.position = PowerBtn.transform.position;
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").fontSize = 18;
+            
+         //   CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").fontSize = 18;
 
         }
         else
         {
             CommonUtils.SetChildText(rect, "middle/task/attr1/currentvalue", powerAttr.CurrentValue.ToString());
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").fontSize = 24;
+         //   CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr1/currentvalue").fontSize = 24;
         }
 
         //设置 Stability
@@ -235,17 +241,17 @@ public class Shop : MonoBehaviour
 
         CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr2/currentvalue").color = Color.white;
 
-        if (currentAttr == 2)
+        if (currentAttr == 2 && !stabilityAttr.IsMaxLevel())
         {
             CommonUtils.SetChildText(rect, "middle/task/attr2/currentvalue", stabilityAttr.CurrentValue.ToString() + "%" + "+" + stabilityAttr.LevelsInfo[0].IncreaseValue + "%");
             CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr2/currentvalue").color = Color.green;
-            selected.transform.position = StabilityBtn.transform.position;
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr2/currentvalue").fontSize = 18;
+           
+           // CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr2/currentvalue").fontSize = 18;
         }
         else
         {
             CommonUtils.SetChildText(rect, "middle/task/attr2/currentvalue", stabilityAttr.CurrentValue.ToString() + "%");
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr2/currentvalue").fontSize = 24;
+         //   CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr2/currentvalue").fontSize = 24;
         }
 
 
@@ -264,19 +270,19 @@ public class Shop : MonoBehaviour
 
         CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr4/currentvalue").color = Color.white;
 
-        if (currentAttr == 1)
+        if (currentAttr == 1 && !maxZoomAttr.IsMaxLevel())
         {
             Debug.Log(maxZoomAttr.LevelsInfo[0].IncreaseValue);
 
             CommonUtils.SetChildText(rect, "middle/task/attr4/currentvalue", "X" + maxZoomAttr.CurrentValue.ToString() + "+" + maxZoomAttr.LevelsInfo[0].IncreaseValue);
             CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr4/currentvalue").color = Color.green;
-            selected.transform.position = MaxZoomBtn.transform.position;
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr4/currentvalue").fontSize = 18;
+            
+         //   CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr4/currentvalue").fontSize = 18;
         }
         else
         {
             CommonUtils.SetChildText(rect, "middle/task/attr4/currentvalue", "X" + maxZoomAttr.CurrentValue.ToString());
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr4/currentvalue").fontSize = 24;
+           // CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr4/currentvalue").fontSize = 24;
         }
 
         //设置 Capacity	
@@ -284,24 +290,38 @@ public class Shop : MonoBehaviour
         capacityAttr = weapon.GetAttributeById(3);
         CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr5/currentvalue").color = Color.white;
 
-        if (currentAttr == 3)
+        if (currentAttr == 3 && !capacityAttr.IsMaxLevel())
         {
             CommonUtils.SetChildText(rect, "middle/task/attr5/currentvalue", capacityAttr.CurrentValue.ToString() + "+" + capacityAttr.LevelsInfo[0].IncreaseValue);
             CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr5/currentvalue").color = Color.green;
-            selected.transform.position = CapacityBtn.transform.position;
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr5/currentvalue").fontSize = 18;
+           
+          //  CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr5/currentvalue").fontSize = 18;
         }
         else
         {
             CommonUtils.SetChildText(rect, "middle/task/attr5/currentvalue", capacityAttr.CurrentValue.ToString());
-            CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr5/currentvalue").fontSize = 24;
+           // CommonUtils.GetChildComponent<Text>(rect, "middle/task/attr5/currentvalue").fontSize = 24;
         }
-
         if (currentAttr == -1)
         {
             selected.rectTransform.anchoredPosition = selectTmpPosition;
         }
-
+        else if(currentAttr == 0)
+        {
+            selected.transform.position = PowerBtn.transform.position;
+        }
+        else if (currentAttr == 1)
+        {
+            selected.transform.position = MaxZoomBtn.transform.position;
+        }
+        else if (currentAttr == 2)
+        {
+            selected.transform.position = StabilityBtn.transform.position;
+        }
+        else if (currentAttr == 3)
+        {
+            selected.transform.position = CapacityBtn.transform.position;
+        }
         if (currentAttr != -1)
         {
             GDEWeaponAttributeData currentAttrdata = weapon.GetAttributeById(currentAttr);
@@ -388,11 +408,11 @@ public class Shop : MonoBehaviour
             case "leftBtn":
                 Debug.Log("leftBtn");
 
-                if (currentGun != 0)
-                {
+                //if (currentGun != 0)
+                //{
                     currentGun = currentGun - 1;
                     updateWeapon(currentGun);
-                }
+                //}
 
 
                 //
@@ -401,11 +421,11 @@ public class Shop : MonoBehaviour
             case "rightBtn":
                 Debug.Log("rightBtn");
 
-                if (currentGun < MaxGun - 1)
-                {
+                //if (currentGun < MaxGun - 1)
+               // {
                     currentGun = currentGun + 1;
                     updateWeapon(currentGun);
-                };
+               // };
 
                 break;
         }
@@ -425,8 +445,8 @@ public class Shop : MonoBehaviour
         else
         {
             //装备
-
-            weapon.Equipped = true;
+            WeaponManager.Instance.EqWeaon(weapon.Id);
+            //weapon.Equipped = true;
 
         }
         updateBuyBtn();
