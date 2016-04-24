@@ -1,12 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum LevelType
+{
+	/// <summary>
+	/// The main task.
+	/// </summary>
+	MainTask,
+	/// <summary>
+	/// The loop task.
+	/// </summary>
+	LoopTask,
+	/// <summary>
+	/// The boss task.
+	/// </summary>
+	BossTask,
+}
+
+
 public class GameValue
 {
 
     public static string s_CurrentSceneName = "";
 
-    public static bool s_IsRandomObjective = false;
+    //public static bool s_IsRandomObjective = false;
+
+	public static LevelType s_LevelType = LevelType.MainTask;
 
     public static LevelData s_LeveData;
 

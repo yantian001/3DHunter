@@ -79,6 +79,13 @@ public class LevelData : ScriptableObject
         return string.Format("{0}/{1}", currentLevel + 1, objectives.Length);
     }
 
+	public int GetLevelsCount()
+	{
+		if (objectives == null)
+			return 0;
+		return objectives.Length;
+	}
+
     public bool IsMainCompleted()
     {
         return currentLevel == objectives.Length;

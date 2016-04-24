@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
         GameValue.s_currentObjective = currentObjective;
         GameValue.mapId = currentScene + 1;
         GameValue.s_CurrentSceneName = ld.sceneName;
-        GameValue.s_IsRandomObjective = isLoopTask;
+        //GameValue.s_IsRandomObjective = isLoopTask;
         GameValue.s_LeveData = ld;
         LeanTween.dispatchEvent((int)Events.GAMESTART);
     }
@@ -58,7 +58,7 @@ public class Menu : MonoBehaviour
         CommonUtils.SetChildToggleOn(parent, "Middle/Boss", false);
         if (currentObjective == null)
         {
-            if (ld.IsMainCompleted())
+			if (Player.CurrentUser.IsMainTaskCompleted(ld.Id,ld.GetLevelsCount()))
             {
                 CommonUtils.SetChildToggleOn(parent, "Middle/LoopTasks", true);
             }
@@ -86,15 +86,16 @@ public class Menu : MonoBehaviour
 
         CommonUtils.SetChildRawImage(parent, "Middle/MainTasks/backImage", ld.mainTexture);
         CommonUtils.SetChildRawImage(parent, "Middle/LoopTasks/backImage", ld.loopTexture);
-        CommonUtils.SetChildText(parent, "Middle/MainTasks/Background/Count", ld.GetCurrentLevelString());
+		int levelCount = ld.GetLevelsCount ();
+		int curLevel = Player.CurrentUser.GetSceneCurrentLevel (ld.Id, levelCount);
+		CommonUtils.SetChildText(parent, "Middle/MainTasks/Background/Count", string.Format("{0}/{1}",curLevel,levelCount));
 
-        if (ld.IsMainCompleted())
+        if (curLevel >= levelCount)
         {
             CommonUtils.SetChildToggleInteractable(parent, "Middle/MainTasks", false);
-            if (ld.IsBossCompleted())
+            if (Player.CurrentUser.GetSceneBossLevelFinished(ld.Id))
             {
                 CommonUtils.SetChildToggleInteractable(parent, "Middle/Boss", false);
-
             }
             else
             {
@@ -109,7 +110,7 @@ public class Menu : MonoBehaviour
 
         }
 
-        if (ld.currentLevel > 0)
+		if (curLevel > 1)
         {
             CommonUtils.SetChildToggleInteractable(parent, "Middle/LoopTasks", true);
         }
@@ -168,14 +169,16 @@ public class Menu : MonoBehaviour
     private void onBossTaskSelected()
     {
         // throw new NotImplementedException();
-        isLoopTask = false;
+        //isLoopTask = false;
+		GameValue.s_LevelType = LevelType.BossTask;
         Objective obj = ObjectiveManager.Instance.GetBossObjective(currentScene);
         Display(obj);
     }
 
     private void OnLoopTaskSelected()
     {
-        isLoopTask = true;
+        //isLoopTask = true;
+		GameValue.s_LevelType = LevelType.LoopTask;
         Objective obj = ObjectiveManager.Instance.GetSceneLoopObjective(currentScene);
         Display(obj);
         //throw new NotImplementedException();
@@ -193,8 +196,9 @@ public class Menu : MonoBehaviour
 
     public void OnMainTaskSelected()
     {
+		GameValue.s_LevelType = LevelType.MainTask;
         Objective obj = ObjectiveManager.Instance.GetSceneCurrentObjective(currentScene);
-        isLoopTask = false;
+       // isLoopTask = false;
         Display(obj);
 
     }

@@ -125,12 +125,7 @@ public class GameManager : MonoBehaviour
         if (v)
         {
 
-            GameValue.s_currentObjective.IsFinished = true;
-            if (GameValue.s_IsRandomObjective)
-            {
-                if (GameValue.s_LeveData)
-                    GameValue.s_LeveData.SetRandom(-1);
-            }
+			Player.CurrentUser.SceneLevelComplete(GameValue.s_LeveData.Id,GameValue.s_LevelType);
         }
         LeanTween.delayedCall(2f, () =>
         {
