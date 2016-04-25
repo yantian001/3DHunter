@@ -245,10 +245,10 @@ public class Player : MonoBehaviour
 
 		if (sr == null) {
 			sr = new SceneResult();
+            sr.id = scene;
 			sceneResults.Add(sr);
 			SaveSceneResult2File();
 		}
-
 		return sr;
 	}
 	/// <summary>
