@@ -77,6 +77,7 @@ public class Finish : MonoBehaviour
             for (int i = 0; i < rewardButtons.Length; i++)
             {
                 rewardButtons[i].interactable = false;
+                rewardButtons[i].gameObject.SetActive(false);
             }
         }
 

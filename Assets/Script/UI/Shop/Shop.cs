@@ -7,7 +7,7 @@ public class Shop : MonoBehaviour
 {
 
 
-
+    public AudioClip succedAudio;
     RectTransform rect;
 
     Button BuyBtn;
@@ -395,6 +395,10 @@ public class Shop : MonoBehaviour
                             //weapon.WeaponAttributes[currentAttr].CurrentValue += weapon.WeaponAttributes[currentAttr].LevelsInfo[0].IncreaseValue;
                             weapon.GetAttributeById(currentAttr).CurrentLevel += 1;
                             readGunData();
+                            if(succedAudio)
+                            {
+                                LeanAudio.play(succedAudio);
+                            }
                         }
                     }
                 }
@@ -440,6 +444,10 @@ public class Shop : MonoBehaviour
             {
                 Player.CurrentUser.UseMoney(ConvertUtil.ToInt32(weapon.Price));
                 weapon.Owned = true;
+                if(succedAudio)
+                {
+                    LeanAudio.play(succedAudio);
+                }
             }
         }
         else
