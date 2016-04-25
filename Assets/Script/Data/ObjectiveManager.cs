@@ -13,10 +13,10 @@ public class ObjectiveManager : MonoBehaviour
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = FindObjectOfType<ObjectiveManager>();
-                if(_instance == null)
+                if (_instance == null)
                 {
                     GameObject container = new GameObject("ObjectiveManagerContainer");
                     _instance = container.AddComponent<ObjectiveManager>();
@@ -29,7 +29,7 @@ public class ObjectiveManager : MonoBehaviour
 
     public void Awake()
     {
-        if(_instance == null)
+        if (_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
@@ -43,19 +43,21 @@ public class ObjectiveManager : MonoBehaviour
 
     public Objective GetSceneCurrentObjective(int scene)
     {
-        if(scene >= 0 && scene < levels.Length)
+        LevelData ld = GetLevelData(scene);
+        if (ld != null)
         {
-            return levels[scene].GetCurrentObjective();
+            return ld.GetCurrentObjective();
         }
+       
         return null;
     }
 
     public Objective GetSceneLoopObjective(int scene)
     {
-        if (scene >= 0 && scene < levels.Length)
-        {
-            return levels[scene].GetRandomObjective();
-        }
+        //if (scene >= 0 && scene < levels.Length)
+        //{
+        //    return levels[scene].GetRandomObjective();
+        //}
         return null;
     }
 
@@ -69,10 +71,12 @@ public class ObjectiveManager : MonoBehaviour
 
     public LevelData GetLevelData(int scene)
     {
-        if (scene >= 0 && scene < levels.Length)
-            return levels[scene];
-        else
-            return null;
+        for (int i = 0; i < levels.Length; i++)
+        {
+            if (levels[i].Id == scene)
+                return levels[i];
+        }
+        return null;
     }
 
     public int GetLevelLength()
@@ -82,9 +86,14 @@ public class ObjectiveManager : MonoBehaviour
 
     public Objective GetSceneCurrentObjective(int currentScene, int currentLevel)
     {
-        if (currentScene >= 0 && currentScene < levels.Length)
+        //if (currentScene >= 0 && currentScene < levels.Length)
+        //{
+        //    return levels[currentScene].GetObjective(currentLevel);
+        //}
+        LevelData ld = GetLevelData(currentScene);
+        if (ld != null)
         {
-            return levels[currentScene].GetObjective(currentLevel);
+            return ld.GetObjective(currentLevel);
         }
         return null;
     }
