@@ -26,6 +26,7 @@ public class Menu : MonoBehaviour
         //throw new NotImplementedException();
         if (currentObjective == null || currentScene == -1 || ld == null)
             return;
+        Player.CurrentUser.LastPlayedScene = currentScene;
         GameValue.s_currentObjective = currentObjective;
         GameValue.mapId = currentScene + 1;
         GameValue.s_CurrentSceneName = ld.sceneName;
@@ -58,7 +59,7 @@ public class Menu : MonoBehaviour
         CommonUtils.SetChildToggleOn(parent, "Middle/Boss", false);
         if (currentObjective == null)
         {
-			if (Player.CurrentUser.IsMainTaskCompleted(ld.Id,ld.GetLevelsCount()))
+            if (Player.CurrentUser.IsMainTaskCompleted(ld.Id, ld.GetLevelsCount()))
             {
                 CommonUtils.SetChildToggleOn(parent, "Middle/LoopTasks", true);
             }
@@ -86,9 +87,9 @@ public class Menu : MonoBehaviour
 
         CommonUtils.SetChildRawImage(parent, "Middle/MainTasks/backImage", ld.mainTexture);
         CommonUtils.SetChildRawImage(parent, "Middle/LoopTasks/backImage", ld.loopTexture);
-		int levelCount = ld.GetLevelsCount ();
-		int curLevel = Player.CurrentUser.GetSceneCurrentLevel (ld.Id, levelCount);
-		CommonUtils.SetChildText(parent, "Middle/MainTasks/Background/Count", string.Format("{0}/{1}",curLevel,levelCount));
+        int levelCount = ld.GetLevelsCount();
+        int curLevel = Player.CurrentUser.GetSceneCurrentLevel(ld.Id, levelCount);
+        CommonUtils.SetChildText(parent, "Middle/MainTasks/Background/Count", string.Format("{0}/{1}", curLevel, levelCount));
 
         if (curLevel >= levelCount)
         {
@@ -110,7 +111,7 @@ public class Menu : MonoBehaviour
 
         }
 
-		if (curLevel > 1)
+        if (curLevel > 1)
         {
             CommonUtils.SetChildToggleInteractable(parent, "Middle/LoopTasks", true);
         }
@@ -170,7 +171,7 @@ public class Menu : MonoBehaviour
     {
         // throw new NotImplementedException();
         //isLoopTask = false;
-		GameValue.s_LevelType = LevelType.BossTask;
+        GameValue.s_LevelType = LevelType.BossTask;
         Objective obj = ObjectiveManager.Instance.GetBossObjective(currentScene);
         Display(obj);
     }
@@ -178,8 +179,9 @@ public class Menu : MonoBehaviour
     private void OnLoopTaskSelected()
     {
         //isLoopTask = true;
-		GameValue.s_LevelType = LevelType.LoopTask;
-        Objective obj = ObjectiveManager.Instance.GetSceneLoopObjective(currentScene);
+        GameValue.s_LevelType = LevelType.LoopTask;
+        int loopLevel = Player.CurrentUser.GetSceneRandomLevel(currentScene);
+        Objective obj = ObjectiveManager.Instance.GetSceneCurrentObjective(currentScene, loopLevel);
         Display(obj);
         //throw new NotImplementedException();
     }
@@ -196,9 +198,10 @@ public class Menu : MonoBehaviour
 
     public void OnMainTaskSelected()
     {
-		GameValue.s_LevelType = LevelType.MainTask;
-        Objective obj = ObjectiveManager.Instance.GetSceneCurrentObjective(currentScene);
-       // isLoopTask = false;
+        GameValue.s_LevelType = LevelType.MainTask;
+        int currentLevel = Player.CurrentUser.GetSceneCurrentLevel(currentScene);
+        Objective obj = ObjectiveManager.Instance.GetSceneCurrentObjective(currentScene, currentLevel - 1);
+        // isLoopTask = false;
         Display(obj);
 
     }
@@ -208,7 +211,7 @@ public class Menu : MonoBehaviour
         if (currentObjective == obj)
             return;
         currentObjective = obj;
-       // Debug.Log(string.Format("{0} ~ {1}", Mathf.CeilToInt(currentObjective.reward * 0.8f), Mathf.CeilToInt(currentObjective.reward * 1.5f)));
+        // Debug.Log(string.Format("{0} ~ {1}", Mathf.CeilToInt(currentObjective.reward * 0.8f), Mathf.CeilToInt(currentObjective.reward * 1.5f)));
         //显示target
         CommonUtils.SetChildText(parent, "Middle/Bg/TargetTitle/Text", currentObjective.GetObjString());
         CommonUtils.SetChildText(parent, "Middle/Bg/RewardTitle/RewardText", string.Format("{0} ~ {1}", Mathf.CeilToInt(currentObjective.reward * 0.8f), Mathf.CeilToInt(currentObjective.reward * 1.5f)));

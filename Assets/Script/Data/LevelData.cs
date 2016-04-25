@@ -54,6 +54,20 @@ public class LevelData : ScriptableObject
         }
         return null;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="level"></param>
+    /// <returns></returns>
+    public Objective GetObjective(int level)
+    {
+        
+        if (level >= 0 && level < objectives.Length)
+        {
+            return objectives[level];
+        }
+        return null;
+    }
 
     public void SetRandom(int r)
     {

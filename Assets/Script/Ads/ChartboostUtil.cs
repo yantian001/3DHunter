@@ -8,7 +8,7 @@ public class ChartboostUtil : MonoBehaviour
 
     static ChartboostUtil _instance = null;
 
-    
+
 
     public static ChartboostUtil Instance
     {
@@ -105,6 +105,7 @@ public class ChartboostUtil : MonoBehaviour
     {
         //throw new System.NotImplementedException();
         LeanTween.dispatchEvent((int)Events.INTERSTITIALCLOSED);
+        Chartboost.cacheInterstitial(obj);
     }
 
     private void Chartboost_didCacheMoreApps(CBLocation obj)
@@ -136,7 +137,7 @@ public class ChartboostUtil : MonoBehaviour
     {
 
         Debug.Log("Chartboost_didCompleteRewardedVideo");
-      //  LeanTween.dispatchEvent((int)Events.VIDEOREWARD);
+        //  LeanTween.dispatchEvent((int)Events.VIDEOREWARD);
     }
 
     /// <summary>
@@ -184,7 +185,7 @@ public class ChartboostUtil : MonoBehaviour
     /// </summary>
     public void ShowQuitInterstitial()
     {
-        if(HasQuitInterstitial())
+        if (HasQuitInterstitial())
         {
             Chartboost.showInterstitial(CBLocation.Quit);
         }
@@ -220,7 +221,7 @@ public class ChartboostUtil : MonoBehaviour
 
     public void ShowMoreAppOnLoading()
     {
-        if(HasMoreAppOnLoading())
+        if (HasMoreAppOnLoading())
         {
             Chartboost.showMoreApps(CBLocation.Settings);
         }
@@ -243,5 +244,5 @@ public class ChartboostUtil : MonoBehaviour
             Chartboost.showMoreApps(CBLocation.Default);
         }
     }
-    
+
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ObjectiveManager : MonoBehaviour
 {
@@ -77,5 +78,14 @@ public class ObjectiveManager : MonoBehaviour
     public int GetLevelLength()
     {
         return levels.Length;
+    }
+
+    public Objective GetSceneCurrentObjective(int currentScene, int currentLevel)
+    {
+        if (currentScene >= 0 && currentScene < levels.Length)
+        {
+            return levels[currentScene].GetObjective(currentLevel);
+        }
+        return null;
     }
 }
