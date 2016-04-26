@@ -9,7 +9,7 @@ public class MoneyDisplay : MonoBehaviour
 
     int currentDisplay = 0;
 
-    int addPerTime = 100;
+    int addPerTime = 10;
 
     int addTo = 0;
     // Use this for initialization
@@ -40,7 +40,7 @@ public class MoneyDisplay : MonoBehaviour
         // currentDisplay = addTo;
     }
 
-    IEnumerator DynamicDisplayMoeny(int to, int from = 0, int time = 50)
+    IEnumerator DynamicDisplayMoeny(int to, int from = 0, int time = 5)
     {
         if (text != null)
         {
