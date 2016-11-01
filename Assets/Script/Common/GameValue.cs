@@ -15,6 +15,14 @@ public enum LevelType
 	/// The boss task.
 	/// </summary>
 	BossTask,
+    /// <summary>
+    /// 日常任务
+    /// </summary>
+    DailyTask,
+    /// <summary>
+    /// 普通任务
+    /// </summary>
+    CommonTask,
 }
 
 
