@@ -48,12 +48,19 @@ public class GameLogic : MonoBehaviour
             LeanTween.addListener((int)Events.GAMESTART, OnGameStart);
             LeanTween.addListener((int)Events.GAMEQUIT, OnGameQuit);
             LeanTween.addListener((int)Events.GAMERATE, OnGameRate);
+            LeanTween.addListener((int)Events.ADONSTART, OnGameLanuch);
             LeanTween.addListener((int)Events.SHOP, OnShop);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnGameLanuch(LTEvent obj)
+    {
+        // throw new NotImplementedException();
+        FUGSDK.Ads.Instance.ShowInterstitial();
     }
 
     private void OnShop(LTEvent obj)
@@ -75,7 +82,8 @@ public class GameLogic : MonoBehaviour
     private void OnGameMore(LTEvent obj)
     {
         // throw new NotImplementedException();
-        ChartboostUtil.Instance.ShowMoreAppOnDefault();
+        //ChartboostUtil.Instance.ShowMoreAppOnDefault();
+        FUGSDK.Ads.Instance.ShowInterstitial();
     }
 
     private void OnGameStart(LTEvent obj)
@@ -193,10 +201,11 @@ public class GameLogic : MonoBehaviour
 
     void OnGameQuit(LTEvent evt)
     {
-        if (ChartboostUtil.Instance.HasQuitInterstitial())
+        if (FUGSDK.Ads.Instance.HasIntersititial())
         {
-            ChartboostUtil.Instance.ShowQuitInterstitial();
-            LeanTween.addListener((int)Events.INTERSTITIALCLOSED, OnInterstitialClosed);
+            //ChartboostUtil.Instance.ShowQuitInterstitial();
+            //LeanTween.addListener((int)Events.INTERSTITIALCLOSED, OnInterstitialClosed);
+            FUGSDK.Ads.Instance.ShowInterstitial(OnInterstitialClosed);
         }
         //else if (GoogleAdsUtil.Instance.HasInterstital())
         //{
@@ -207,6 +216,12 @@ public class GameLogic : MonoBehaviour
         {
             Application.Quit();
         }
+    }
+
+    private void OnInterstitialClosed()
+    {
+        //throw new NotImplementedException();
+        Application.Quit();
     }
 
     public void OnInterstitialClosed(LTEvent evt)
