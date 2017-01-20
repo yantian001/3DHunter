@@ -50,11 +50,35 @@ public class GameLogic : MonoBehaviour
             LeanTween.addListener((int)Events.GAMERATE, OnGameRate);
             LeanTween.addListener((int)Events.ADONSTART, OnGameLanuch);
             LeanTween.addListener((int)Events.SHOP, OnShop);
+            LeanTween.addListener((int)Events.GAMEMORE, OnGameMore);
+            LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+            LeanTween.addListener((int)Events.GAMEPAUSE, OnGamePause);
+            LeanTween.addListener((int)Events.MENULOADED, OnGameMenu);
+          
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnGameMenu(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        // this.ShowInterstitialOnHomescreen();
+    }
+
+    private void OnGamePause(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        //this.ShowInterstitialOnDefault();
+        FUGSDK.Ads.Instance.ShowInterstitial();
+    }
+
+    private void OnGameFinish(LTEvent obj)
+    {
+        //throw new NotImplementedException();
+        FUGSDK.Ads.Instance.ShowInterstitial();
     }
 
     private void OnGameLanuch(LTEvent obj)
@@ -83,7 +107,12 @@ public class GameLogic : MonoBehaviour
     {
         // throw new NotImplementedException();
         //ChartboostUtil.Instance.ShowMoreAppOnDefault();
-        FUGSDK.Ads.Instance.ShowInterstitial();
+        if (FUGSDK.Ads.Instance.HasMoreApp())
+        {
+            FUGSDK.Ads.Instance.ShowMoreApp();
+        }
+        else
+            FUGSDK.Ads.Instance.ShowInterstitial();
     }
 
     private void OnGameStart(LTEvent obj)

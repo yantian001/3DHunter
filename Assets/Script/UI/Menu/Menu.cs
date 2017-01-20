@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using BehaviorDesigner.Runtime;
 using System;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Menu : MonoBehaviour
 {
@@ -32,14 +34,47 @@ public class Menu : MonoBehaviour
         GameValue.s_CurrentSceneName = ld.sceneName;
         //GameValue.s_IsRandomObjective = isLoopTask;
         GameValue.s_LeveData = ld;
-        LeanTween.dispatchEvent((int)Events.GAMESTART);
+        //LeanTween.dispatchEvent((int)Events.GAMESTART);
+        StartCoroutine(LoadScene(GameValue.s_CurrentSceneName));
     }
 
     public void OnDestroy()
     {
         LeanTween.removeListener((int)Events.PLAYCLICKED, OnPlayClicked);
+        FUGSDK.Ads.Instance.HideBanner();
     }
 
+    #region Show Loading
+    public RectTransform LoadingT;
+    AsyncOperation async = null;
+    IEnumerator LoadScene(string sceneName)
+    {
+        // FUGSDK.Ads.Instance.HideBanner();
+        if (LoadingT)
+        {
+            LoadingT.anchoredPosition = new Vector2(0, 0);
+        }
+        FUGSDK.Ads.Instance.HideBanner();
+        async = SceneManager.LoadSceneAsync(sceneName);
+        async.allowSceneActivation = false;
+        while (async.progress < 0.9f)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
+        CommonUtils.SetChildActive(LoadingT, "Background/Loading", false);
+        CommonUtils.SetChildActive(LoadingT, "Background/Tap", true);
+    }
+
+
+    public void OnTapToContinue()
+    {
+        if (async != null && async.progress >= 0.9f)
+        {
+            async.allowSceneActivation = true;
+        }
+    }
+    #endregion
 
 
     // Use this for initialization
@@ -50,6 +85,7 @@ public class Menu : MonoBehaviour
         UpdateSceneDisplay(Player.CurrentUser.LastPlayedScene);
 
         //OnMainTaskSelected();
+        FUGSDK.Ads.Instance.ShowBanner(GoogleMobileAds.Api.AdPosition.BottomLeft);
     }
 
     void DefaultSelect()
