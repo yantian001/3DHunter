@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Native : MonoBehaviour
 {
 
-    public static string nativePlacementID = "814021835405350_814023708738496";
+    public static string nativePlacementID = "1873454196269559_1873455266269452";
 
     protected NativeAd nativeAd;
 
